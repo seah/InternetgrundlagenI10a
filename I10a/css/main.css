@@ -159,7 +159,6 @@ top:0px;
 left:0px;
 width: 850px;
 height: 600px;
-z-index: 0;
 }
 
 div#Text /*hepo*/
@@ -169,7 +168,7 @@ top:170px;
 left:170px;
 width: 480px;
 height: 430px;
-z-index: 2;
+z-index: 3;
 }
 
 div#Bilder /*hepo*/
@@ -179,7 +178,7 @@ top:170px;
 left:670px;
 width: 180px;
 height: 430px;
-z-index: 1;
+z-index: 2;
 }
  
 #Text a img { visibility:hidden; position: absolute; top:0px;left: 530px; height: 100px; width: 150px; z-index:4; }
