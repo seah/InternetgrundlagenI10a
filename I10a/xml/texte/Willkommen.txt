@@ -1,0 +1,6 @@
+﻿HALLO WELT! 
+Wie geht es euch? Mal sehen wie viel 
+ich hier renschreiben kann ohne,
+dass es sehr komisch aussieht. Und dann geht der Beispieltext erst einmal sehr lange weiter damit sich allmählich die Textbox füllt.
+Dieser Text wird dann benutzt um ein bisschen die Eigentschaften von object auszuprobieren und wie man den Style dann
+an seine Bedürfnisse anpassen kann. Das soll es vorerst gewesen sein.

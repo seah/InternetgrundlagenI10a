@@ -1,0 +1,2 @@
+<!ELEMENT Titel (#PCDATA)>
+<!ELEMENT Beschreibung (#PCDATA)>

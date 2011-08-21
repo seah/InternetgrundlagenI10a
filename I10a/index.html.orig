@@ -43,7 +43,7 @@
             </li>
   
             <li id="Button4">
-                <a href="xml/guide.xml"/>
+                <a href="html/HIMYM Show.htm"/>
             </li>
   
             <li id="Button5">
@@ -70,6 +70,18 @@
     </div>
     
     <div id="Bilder">
+<<<<<<< HEAD
+=======
+      
+    </div>
+  </div>
+  
+  
+  <div id="Layout"></div>
+
+  <div id="Button6">
+  </div>
+>>>>>>> aa18821b72f4a478fb76034e5db7a1353c98192b
 
   </div>
 
