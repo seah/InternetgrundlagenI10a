@@ -9,42 +9,61 @@
  */
 
 /***********1.General************/
-body,html
+body,html /*seah*/
 {
+    background-color:#000000;
 }
 
 div#Layout /*hepo*/
 {
-background-image: url("../gfx/layout/Layout.png");
-position:absolute;
+position:relative; /*seah*/
 top:0px;
 left:0px;
 width: 850px;
 height: 600px;
-z-index: 1;
+margin:auto;
+z-index: 0;
+background-image: url("../gfx/layout/background.jpg"); /*seah*/
 }
 
 /***********2.Header************/
 
 /***********TopNavigation************/
 
-#tobnav 
+#topnav /*seah*/
 {
     z-index: 1;
+    position:absolute;
+    height:170px;   
+    left:160px;
+    width:688px;
+    background-image: url("../gfx/layout/header.png");
+}
+
+#topnav ul /*seah*/
+{
+    list-style:none;
+}
+
+#topnav li /*seah*/
+{
 }
 
 #Button1 a,#Button2 a,#Button3 a,#Button4 a,#Button5 a,#Button6 /*hepo*/
 {
-position:absolute;
+position:absolute; /*seah*/
 top:59px;
-z-index: 3;
+z-index: 2;
 width: 54px;
 height: 111px;
+left:100px; /*seah*/
+display:block;  /*seah*/
+float:left;
 }
 
 #Button1 a /*hepo*/
 {
-left:410px;
+left:260px;
 background-image: url("../gfx/layout/Button1.png");
 }
 
@@ -55,8 +74,7 @@ background-image: url("../gfx/layout/HighlightButton1.png");
 
 #Button2 a /*hepo*/
 {
-position:absolute;
-left:478px;
+    left:320px;
 background-image: url("../gfx/layout/Button2.png");
 }
 
@@ -67,8 +85,7 @@ background-image: url("../gfx/layout/HighlightButton2.png");
 
 #Button3 a /*hepo*/
 {
-position:absolute;
-left:546px;
+    left:380px;
 background-image: url("../gfx/layout/Button3.png");
 }
 
@@ -79,8 +96,7 @@ background-image: url("../gfx/layout/HighlightButton3.png");
 
 #Button4 a /*hepo*/
 {
-position:absolute;
-left:613px;
+    left:440px;
 background-image: url("../gfx/layout/Button4.png");
 }
 
@@ -91,8 +107,7 @@ background-image: url("../gfx/layout/HighlightButton4.png");
 
 #Button5 a /*hepo*/
 {
-position:absolute;
-left:681px;
+    left:500px;
 background-image: url("../gfx/layout/Button5.png");
 }
 
@@ -103,83 +118,95 @@ background-image: url("../gfx/layout/HighlightButton5.png");
 
 #Button6 /*hepo*/
 {
-position:absolute;
-left:742px;
+position:relative; /*seah*/
+left:520px;
 width: 108px;
 background-image: url("../gfx/layout/Button6.png");
+display:block;
 }
 
 /***********3.Navigation************/
 
+#leftnav /*seah*/
+{
+    background-image: url("../gfx/layout/navigation.png");
+    width:160px;
+    height:600px;
+    float:left;
+    z-index: 1;
+    position:absolute;
+}
+
+#leftnav ul /*seah*/
+{
+    top:150px;
+    position:absolute;
+    list-style:none;
+}
+
 #Link1,#Link2,#Link3,#Link4,#Link5 /*hepo*/
 {
-position:absolute;
-left:17px;
+position:relative; /*seah*/
 z-index: 1;
+right:20px; /*seah*/
 width:125px;
 height:46px;
 }
 
 #Link1 /*hepo*/
 {
-top:161px;
 background-image:url("../gfx/layout/Link1.png");
 }
 
 #Link2 /*hepo*/
 {
-top:207px;
 background-image:url("../gfx/layout/Link2.png");
 }
 
 #Link3 /*hepo*/
 {
-top:253px;
 background-image:url("../gfx/layout/Link3.png");
 }
 
 #Link4 /*hepo*/
 {
-top:299px;
 background-image:url("../gfx/layout/Link4.png");
 }
 
 #Link5 /*hepo*/
 {
-top:345px;
 background-image:url("../gfx/layout/Link5.png");
 }
 
 /***********4.Content************/
 div#Content /*hepo*/
 {
-background-image: url("../gfx/layout/Background.jpg");
-position:absolute;
-top:0px;
-left:0px;
-width: 850px;
-height: 600px;
+position:absolute; /*seah*/
+top:170px;
+left:165px;
+width: 760px;
+height: 430px;
+z-index: 1;
 }
 
 div#Text /*hepo*/
 {
-position:absolute;
-top:170px;
-left:170px;
+position:absolute; /*seah*/
+margin:10px;
 width: 480px;
 height: 430px;
-z-index: 3;
+z-index: 1;
 }
 
 div#Bilder /*hepo*/
 {
-position:absolute;
-top:170px;
-left:670px;
+position:absolute; /*seah*/
+top:10px;
+left: 500px;
 width: 180px;
-height: 430px;
-z-index: 2;
+height: 410px;
+z-index: 1;
 }
  
-#Text a img { visibility:hidden; position: absolute; top:0px;left: 530px; height: 100px; width: 150px; z-index:4; }
+#Text a img { visibility:hidden; position:absolute; top:0px;left: 470px; height: 100px; width: 150px; z-index:4; border:none; }
 #Text a:hover img { visibility:visible; }
