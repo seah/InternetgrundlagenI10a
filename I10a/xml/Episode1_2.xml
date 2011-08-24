@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<!DOCTYPE Titel SYSTEM "guide.dtd">-->
+<?xml-stylesheet type="text/xsl" href="test.xslt"?>
+<Episode>
+  <Titel>Seite 2</Titel>
+  <Beschreibung>
+    <Seite id="2" lastpage="false">
+      Hier kommt der Text einer jeden Folge rein.3
+    </Seite>
+  </Beschreibung>
+</Episode>
