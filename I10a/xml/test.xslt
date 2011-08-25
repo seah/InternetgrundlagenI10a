@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html"/>
   <xsl:template match="/">
     <!--<xsl:param name="page" select="$merkeindex"></xsl:param> -->
     <!-- Ruft die eine Episode der guide.xml auf. -->
@@ -81,7 +82,7 @@
                     <xsl:with-param name="merkeindex" select="$indexervariable"></xsl:with-param>
                   </xsl:call-template>
                 </xsl:if> -->
-                  <xsl:value-of select="$seite"/>
+                <xsl:value-of select="$seite" disable-output-escaping="yes"/>
               </div>
               <div id="bottomnav">
                 <xsl:if test="$seite/@id != '1'">

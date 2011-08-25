@@ -210,17 +210,15 @@ height: 410px;
 z-index: 1;
 }
  
-#Text a img { visibility:hidden; position:absolute; top:0px;left: 470px; height: 100px; width: 150px; z-index:4; border:none; }
+
+#Text a img.Bubble { visibility:hidden; position:absolute; top:0px;left: 470px; height: 100px; width: 150px; z-index:4; border:none; }
+#Text a img.SpeechBubbleHead { visibility:hidden; position:absolute; top:-105px;left: 545px; height: 111px; width: 108px; z-index:4; border:none; }
 #Text a:hover img { visibility:visible; }
+
 
 .Text
 {
     width:400px;
     max-height:400px;
     color:#FFFFFF
-}
-
-.Linktitel
-{
-    
 }

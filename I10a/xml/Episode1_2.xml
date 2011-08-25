@@ -5,7 +5,8 @@
   <Titel>Seite 2</Titel>
   <Beschreibung>
     <Seite id="2" lastpage="false">
-      Hier kommt der Text einer jeden Folge rein.3
+      <![CDATA[Hier kommt der Text einer jeden Folge rein.
+      <a href="../index.html">Startseite <img class="Bubble" src="../gfx/layout/SpeechBubble1.png" alt="Blub"/><img class="SpeechBubbleHead" src="../gfx/layout/Button6.png" alt="Blub"/></a>]]>
     </Seite>
   </Beschreibung>
 </Episode>
