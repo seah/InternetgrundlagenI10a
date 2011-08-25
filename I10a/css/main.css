@@ -152,6 +152,7 @@ right:20px; /*seah*/
 width:125px;
 height:46px;
 padding:auto;
+text-align: center;
 }
 
 #Link1 /*hepo*/
@@ -217,4 +218,9 @@ z-index: 1;
     width:400px;
     max-height:400px;
     color:#FFFFFF
+}
+
+.Linktitel
+{
+    
 }

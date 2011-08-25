@@ -43,23 +43,23 @@
           <div id="topnav">
             <ul>
               <li id="Button1">
-                <a href="index.html"/>
+                <a href="../index.html"/>
               </li>
 
               <li id="Button2">
-                <a href="html/HIMYM Bar.htm"/>
+                <a href="../html/HIMYM Bar.htm"/>
               </li>
 
               <li id="Button3">
-                <a href="html/HIMYM Quiz.htm"/>
+                <a href="../html/HIMYM Quiz.htm"/>
               </li>
 
               <li id="Button4">
-                <a href="xml/guide.xml"/>
+                <a href="guide.xml"/>
               </li>
 
               <li id="Button5">
-                <a href="html/HIMYM Medien.htm"/>
+                <a href="../html/HIMYM Medien.htm"/>
               </li>
 
 
