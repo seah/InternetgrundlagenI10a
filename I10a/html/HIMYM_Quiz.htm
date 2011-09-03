@@ -11,9 +11,17 @@
 </head>
 <body onload="javascript:Quiz();">
 <div id="Layout"> <!-- seah: Neustukturierung der Seite. Elemente sind nun geschachtelt und mittig zentriert. -->
+ 
 
   <div id="leftnav"> <!-- seah -->
-        <ul>
+        <!-- Im "leftnav" - Div wird die Auswertung des Quiz angezeigt.-->
+        <span id="Span1"></span>'s Statistik zu Versuch Nr.
+        <span id="Span2"></span><br />
+        <span id="Span3"></span><br />
+        <span id="Span4"></span><br />
+        <span id="Span5"></span><br />
+        <span id="Span6"></span>
+        <ul><!--Die Anzahl der schlechten Antworten wird über die * Funktion in dieses Div geladen-->
     </ul>
   </div>
 
@@ -72,10 +80,11 @@
 
   <div id="Button6"></div>
 
-  <div id="Content">    
-  
+  <div id="Content">
+      
   <div id="Quizbilder">
-  <img src="" id="Bild" width="650px" height="270px" alt="nix"/>
+  <!--In diese Divbox wird ein Bild und eine Textbeschreibung geschrieben die das aktuelle Quizszenario widerspiegelt -->
+  <img src="" id="Bild" width="650px" height="270px" alt="nix"/><!-- Bild wird aus der -->
     <span id="Stage">
   </span>
   </div>

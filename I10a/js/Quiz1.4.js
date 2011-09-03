@@ -1,24 +1,29 @@
+/*Diese Javascript- Datei dient der Darstellung des 
+
 /*vstand beschreibt den Spielstand*/
 var vstand = 0;
+/*Die Anzahl der Versuche wird abgespeichert*/
+var vversuch = 1;
+/* folgende Variablen halten die Anzahl der Antworten für den gegenwärtigen Versuch nach Antwortkategorien fest */
 var vantwortgut = 0;
 var vantwortschlecht = 0;
 var vantwortsehrschlecht = 0;
 var vantwortok = 0;
-var vversuch = 1;
+/* Setzen der spielername- Variable, die für die Personalisierung der Auswertung des Quiz */
 var spielername = "";
-
+/* folgende Variablen halten die Anzahl der Antworten für den gegenwärtigen Versuch nach Antwortkategorien fest */
 var vguteantworten = 0;
 var vokantworten = 0;
 var vschlechteantworten = 0;
 var vsehrschlechteantworten = 0;
+/*Darstellung des aktuellen Stranges der Handlung*/
 var strang = 0;
-
-/*hier stehen die Milestones(mhandlung).
+/*hier stehen die einzelenen Quizszenarien (mhandlung).
 *Es ist bei Arrayeintrag...
 *... bei Arrayeintrag [0] oder [1] eine Schlüsselsituation, auf die reagiert werden muss.
 *... bei Arrayeintrag [2] die Beschreibung der ersten Sackgasse
 *... bei Arrayeintrag [3] die Beschreibung der zweiten Sackgasse
-*... bei Arrayeintrag [4] Siegesmitteilung */
+*/
 
 mhandlung = new Array(3);
 mhandlung[0] = new Array(1);
@@ -35,6 +40,7 @@ mhandlung[2][1] = "Nachdem ihr ausgetrunken habt, sagt sie:'Ist das nur mein Ein
 *2 entspricht der richtigen Reaktion (nächster Milenstein wir geladen, bzw. Sieg verkündet)
 *1 entspricht dem dem ersten Fehlschlagszenario, Barney gewinnt (Aufmunterung des Spielers, Aufforderung zum Neuladen des Quiz)
 *0 entspricht dem dem zweiten Fehlschlagszenario, beide werden abserviert (Aufmunterung des Spielers, Aufforderung zum Neuladen des Quiz)
+*
 */
 
 mreaktion = new Array(2);
