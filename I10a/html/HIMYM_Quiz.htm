@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <!-- seah -->
+<html xmlns="http://www.w3.org/1999/xhtml" > <!-- hepo -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <!-- seah -->
+    <title>How I Met Your Mother - Das Quiz</title> <!-- hepo -->
+  <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+<!--seka: hier ist die Quiz-js -->
+  <script type="text/javascript" src="../js/Quiz1.5probe.js" charset="ISO-8859-15"></script><!-- ISO musste für javascript sein-->
+<!-- ;)  -->
+</head>
+<body onload="javascript:Quiz();">
+<div id="Layout"> <!-- seah: Neustukturierung der Seite. Elemente sind nun geschachtelt und mittig zentriert. -->
+
+  <div id="leftnav"> <!-- seah -->
+        <ul>
+    </ul>
+  </div>
+
+ <div id="Impressum"> <!-- hepo -->
+        <a href="HIMYM_Impressum.htm"></a>
+    </div>
+
+<div id="topnav"> <!-- seah -->
+        <ul>
+            <li id="Button1">
+                <a href="../index.htm">
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/TedBubble.png" alt="Blub"/>
+                    <span class="himym">Die Startseite mit News <br /> und Übersicht!</span>
+                </a>
+            </li>
+  
+            <li id="Button2">
+                <a href="HIMYM_Bar.htm">
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/RobinBubble.png" alt="Blub"/>
+                    <span class="himym">Die Bar von How I Met Your Mother.<br />
+                    Durchstöbere Mc Laren's!</span>
+                </a>
+            </li>
+  
+            <li id="Button3">
+                <a href="HIMYM_Quiz.htm">
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/BarneyBubble.png" alt="Blub"/>
+                    <span class="himym">Das ultimate Quiz mit Barney Stinson.<br />
+                    Teste dein Wissen vom Bro-Code!</span>
+                </a>
+            </li>
+  
+            <li id="Button4">
+                <a  href="HIMYM_Show.htm">
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Blub"/>
+                    <span class="himym">Infos über die Show.<br />
+                    Mit Episoden-Guide und Charakterinfos!</span>
+                </a>
+            </li>
+  
+            <li id="Button5">
+                <a href="HIMYM_Medien.htm">
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Blub"/>
+                    <span class="himym">Die Mediensammlung.<br />
+                    Finde hier Bilder, Links und Videos rund um<br />
+                    How I Met Your Mother!</span>
+                </a>
+            </li>
+      </ul>
+  </div>
+
+  <div id="Button6"></div>
+
+  <div id="Content">    
+  
+  <div id="Quizbilder">
+  <img src="" id="Bild" width="650px" height="270px" alt="nix"/>
+    <span id="Stage">
+  </span>
+  </div>
+
+
+
+    <div id="Quiztext">
+        <div id="reset" style="visibility:hidden;"><span id="name"></span>'s Statistik zu Versuch Nr.<span id="versuch"></span><br />
+        <span id="Statistik1"></span><br /><span id="Statistik2"></span><br /><span id="Statistik3"></span><br /><span id="Statistik4">
+        </span><br /><a href="javascript:reset()" >Versuche es nochmal</a></div>
+
+        <div id="welcome" style="visibility:hidden">
+        <form action="" name="anmeldung">
+        <input type="text" name="sname"/>
+        <input type="button" onclick="go();" value="Zum Quiz" />
+        </form></div>
+        <div id="eingabe" style="visibility:visible;">
+        <form action="">
+                    
+                        <div id="show1"><p><input type="radio" name="Handlung" value="a"/><b><span class="weiterlesen" id="moeglichkeit1Intro">Möglichkeit1<br/>
+                        </span></b><br/><span class="moeglichkeit" id="Moeglichkeit1">                    
+                        </span></p></div>
+                     
+                       <div id="show2"><p><input type="radio" name="Handlung" value="b"/><b><span class="weiterlesen" id="moeglichkeit2Intro">Möglichkeit2<br/>
+                       </span></b><br/><span class="moeglichkeit" id="Moeglichkeit2">
+                        </span></p></div>
+                    
+                        <div id="show3"><p><input type="radio" name="Handlung" value="c"/><b><span class="weiterlesen" id="moeglichkeit3Intro">Möglichkeit3<br/>
+                        </span></b><br/><span class="moeglichkeit" id="Moeglichkeit3">
+                        </span></p></div>
+
+                        <div id="show4"><p><input type="radio" name="Handlung" value="d"/><b><span class="weiterlesen" id="moeglichkeit4Intro">Möglichkeit4<br/>
+                        </span></b><br/><span class="moeglichkeit" id="Moeglichkeit4">
+                        </span></p></div>
+
+                <input type="button" name="1" value="Das ist meine Antwort!" onclick="ladeSzenario();"/>
+        </form>
+        </div>
+    </div>
+
+<!--seka out-->
+
+  </div>
+
+  </div>
+ 
+
+</body>
+</html>

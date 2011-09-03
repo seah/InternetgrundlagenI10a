@@ -1,0 +1,398 @@
+/*
+ * Aufbau des Dokuments /seah & hepo/
+ * 
+ * 1.General                /seah & hepo/                 
+ * 2.Header                 /seah & hepo/
+ * 3.Navigation             /seah & hepo/
+ * 4.Content                /hepo/
+ * 5.Die Bar                /hepo/
+ * 6.Das Quiz               /seka/
+ * 7.Typographie            /hepo/
+ * 8.Sprechblasen           /hepo/
+ * 
+ *
+ * Schlüssel für Verantwortungsbereiche:
+ *     
+ *      seha    -   Sebastian Ahlen
+ *      seka    -   Sergej Kasper
+ *      hepo    -   Henrik Porath
+ *      
+ * Entsprechend markierte Code-Blöcke wurden von der angegebenen Person erstellt.
+
+/***********1.General**********************************************************************************************************************************************************/
+
+body,html /*seah*/
+{background-color:#000000;}
+
+div#Layout /*hepo*/
+{
+position:relative; /*seah*/
+width: 850px;
+height: 600px;
+margin: auto;
+z-index: 0; /*seah*/
+}
+
+/***********2.Header***********************************************************************************************************************************************************/
+
+/* Im Header werden sämtliche Layout-Bestandteile der Seite definiert.
+Dabei handelt es sich um die Navigationsleisten, das Impressum sowie den sechsten Button, der kein Link ist,
+sondern auf dem lediglich andere Bilder dargestellt werden (siehe Sektion 8: Sprechblasen).
+*/
+
+#topnav /*seah*/
+{
+    z-index: 4;
+    position:absolute;
+    height:170px;   
+    left:160px;
+    width:571px;
+    background-image: url("../gfx/layout/header.png");
+    background-repeat:no-repeat;
+}
+
+#topnav ul /*seah*/
+{list-style:none;}
+
+#topnav li /*seah*/
+{}
+
+#Button6 /*hepo*/
+{
+    z-index: 0;
+    position:absolute;
+    height:600px;   
+    left:731px;
+    width:300px;
+    background-image: url("../gfx/layout/Button6_2.png");
+    background-repeat:no-repeat;
+    overflow:visible;
+}
+
+#Impressum a /*hepo*/
+{position: absolute; width:125px;height:40px;top:560px;left:10px;z-index:4;background-image:url("../gfx/layout/Impressum.png");}
+
+/***********3.Navigation*******************************************************************************************************************************************************/
+
+/* Die Navigation ist in zwei große Navigationsleisten unterteilt.
+"LeftNavigation" umfasst Links zu weiterführenden Seiten der oberen Kategorien, z.B. die Bildergalerie der Medien-Kategorie.
+"ButtonNavigation" umfasst Links zu den Hauptkategorien. Sie sind mit Hover-Effekten sowie Sprechblasen (siehe Abschnitt 8)
+ausgestattet, sodass Charaktere der Sendung weitere Erklärungen zu den Kategorien geben, wenn man mit der Maus darüber fährt.
+*/
+
+/***********LeftNavigation************/
+
+#leftnav /*seah*/
+{
+    background-image: url("../gfx/layout/navigation.png");
+    width:160px;
+    height:600px;
+    float:left;
+    z-index: 1;
+    position:absolute;
+}
+
+#leftnav ul /*seah*/
+{top:150px; position:absolute; list-style:none;}
+
+#Link1,#Link2,#Link3,#Link4,#Link5 /*hepo*/
+{
+position:relative; /*seah*/
+z-index: 1;
+right:20px;
+width:125px;
+height:46px;
+padding:auto;
+text-align: center;
+}
+
+/* Es gibt bis zu fünf Links, die relativ in einer absolut positionierten Liste angeordnet sind.
+Die Anzahl der Links wäre theoretisch nach Belieben erweiterbar.
+*/
+
+#Link1 /*hepo*/
+{background-image:url("../gfx/layout/Link1.png");}
+
+#Link2 /*hepo*/
+{background-image:url("../gfx/layout/Link2.png");}
+
+#Link3 /*hepo*/
+{background-image:url("../gfx/layout/Link3.png");}
+
+#Link4 /*hepo*/
+{background-image:url("../gfx/layout/Link4.png");}
+
+#Link5 /*hepo*/
+{background-image:url("../gfx/layout/Link5.png");}
+
+li a /*seah*/
+{text-decoration:none;color:#000000;}
+
+/* Bei den Bildern der Links handelt es sich um leere Flächen.
+Mittels eines speziell formatierten <span>-Elements in der HTML werden die Links mit Beschriftung versehen.
+*/
+
+/***********ButtonNavigation*********/
+
+/* Alle Buttons sind statisch in einer absolut positionierten Liste abgelegt.
+Die statische Positionierung ist notwendig, damit tiefer liegende Elemente der Buttons,
+wie zum Beispiel die Bilder und Beschriftungen der Sprechblasen,
+sich nicht an der Position der Buttons, sondern der der Liste orientieren.
+Auf diese Weise ist eine gleichbleibende Position aller Sprechblasen bei allen Buttons gewährleistet.
+
+Über float:left und eine Manipulierung der Margins wird eine geringfügige Positionierung der Buttons bewirkt.
+*/
+
+#Button1 a,#Button2 a,#Button3 a,#Button4 a,#Button5 a /*hepo*/
+{
+position:static;
+width: 54px;
+height: 111px;
+z-index: 4;
+display:block; /*seah*/
+margin-left: 15px;
+margin-top: 45px;
+float:left;
+}
+
+#Button1 a /*hepo*/ 
+{margin-left: 200px;background-image: url("../gfx/layout/Button1.png");}
+
+#Button1 a:hover /*hepo*/ 
+{background-image: url("../gfx/layout/HighlightButton1.png");}
+
+#Button2 a /*hepo*/ 
+{background-image: url("../gfx/layout/Button2.png");}
+
+#Button2 a:hover /*hepo*/ 
+{background-image: url("../gfx/layout/HighlightButton2.png");}
+
+#Button3 a /*hepo*/ 
+{background-image: url("../gfx/layout/Button3.png");}
+
+#Button3 a:hover /*hepo*/ 
+{background-image: url("../gfx/layout/HighlightButton3.png");}
+
+#Button4 a /*hepo*/ 
+{background-image: url("../gfx/layout/Button4.png");}
+
+#Button4 a:hover /*hepo*/
+{background-image: url("../gfx/layout/HighlightButton4.png");}
+
+#Button5 a /*hepo*/ 
+{background-image: url("../gfx/layout/Button5.png");}
+
+#Button5 a:hover /*hepo*/ 
+{background-image: url("../gfx/layout/HighlightButton5.png");}
+
+/***********4.Content**********************************************************************************************************************************************************/
+
+/* Dies sind die Hauptelemente der Content-Div-Box, in denen die Inhalte der Seite abgelegt werden.
+Es gibt drei verschiedene: Text, Bilder sowie eine größere Version der Text-Box, die nur auf der
+Medien-Seite verwendet wird, genannt Medientext.
+Hier wird die Schriftart und -farbe für Inhalte im Allgemeinen festgelegt.
+Der z-Index der Bilder-Div-Box wird auf 0 gesetzt, um die fehlerfreie Anzeige der Sprechblasen zu garantieren.
+*/
+
+div#Content, div#Text, div#Medientext, div#Bilder /*hepo*/
+{position:absolute;z-index: 1;margin:0px;color: White;font-family: Sans-Serif;}
+
+div#Content /*hepo*/
+{
+top:170px;
+left:165px;
+width: 760px;
+height: 430px;
+}
+
+div#Text /*hepo*/
+{
+width: 480px;
+height: 420px;
+text-align:justify;
+background-image:url("../gfx/layout/textbox.png");
+padding:5px;
+}
+
+div#Medientext /*hepo*/
+{
+width: 675px;
+height: 430px;
+text-align:justify;
+background-image:url("../gfx/layout/textbox.png");
+padding:5px;
+overflow:scroll;
+}
+
+div#Bilder /*hepo*/
+{
+left: 500px;
+width: 180px;
+height: 425px;
+background-image:url("../gfx/layout/bilderbox.png");
+z-index: 0;
+padding-top:5px;
+padding-left:5px;
+}
+
+/***********5.Die Bar**********************************************************************************************************************************************************/
+
+/* In der Bar werden mehrere Div-Boxen verwendet, um Bestandteile des Hintergrundbildes hervorzuheben und in Sprechblasen Erklärungen dazu zu bieten.
+Dies wird mittels Hover-Effekten erreicht.
+Um diese Funktionalität zu erreichen und die Sprechblasen-Effekte zu unterstützen, erwies sich eine Imagemap als unzureichend.
+Mittels der Div-Box-Lösung können einzelne Elemente dagegen gezielt angesprochen werden.
+
+Ähnlich zu der Button-Navigation sind sämtliche Div-Boxen der Bar (zu erkennen an der Klasse .BarDiv) statisch positioniert (sowie zusätzlich über Margins),
+damit sich die absolut positionierten Sprechblasen nicht an ihnen, sondern dem darüberliegenden Elternelement orientiert.
+Dieses Elternelement ist hier die Div-Box Text. So sind gleich positionierte Sprechblasen gewährleistet.
+*/
+
+.BarDiv a /*hepo*/
+{width: 100px; height: 100px; z-index: 4; float:left;  }
+
+#Div1 a /*hepo*/
+{margin-top:50px;}
+
+#Div2 a /*hepo*/
+{margin-left:200px;}
+
+#Div3 a /*hepo*/
+{margin-left:300px; margin-top:50px;}
+
+div div.BarDiv a:hover /*hepo*/
+{background-image:url("../gfx/layout/HighlightButton3.png");}
+
+div#Barcontent /*hepo*/
+{position:absolute; top:170px; left:165px; width: 700px; height: 430px; z-index: 1; background-image:url("../gfx/layout/BackgroundBar.jpg"); background-repeat:no-repeat; }
+
+/***********6.Das Quiz*********************************************************************************************************************************************************/
+
+/* ???????????????????????????????
+*/
+
+div#Quizbilder,div#Bild,div#Quiztext,#Stage,div#reset,div#welcome,div#eingabe /*seka*/
+{position:absolute;}
+
+div#Quizbilder /*seka*/
+{z-index: 0; width: 650px; height: 270px;}
+
+div#Bild /*seka*/
+{z-index: 3; border-color:Orange; border-width:3; border-style:groove;}
+
+div#Quiztext /*seka*/
+{top:225px; left:0px; width: 650px; height: 130px; z-index: 2; color:Orange; background-color:transparent;}
+
+#Stage /*seka*/
+{width: 500px; left: 0px; bottom:15px; z-index: 4; color:orange;}
+
+div#reset /*seka*/
+{top:50px; width: 650px; left:0px; height:50px;}
+
+div#welcome /*seka*/
+{top:50px; width: 650px; left:0px; height:50;}
+
+div#eingabe /*seka*/
+{top:50px; width: 650px; left:0px; height:80;}
+
+div#eingabe div p /*seka*/ 
+{margin-top:5px; margin-bottom:5px; background-color:black; font-size:0;}
+
+div#eingabe div p:first-line /*seka*/
+{color:Orange;font-size:medium;}
+
+div#eingabe div p:hover /*seka*/
+{font-size:medium;}    
+
+/***********7.Typographie******************************************************************************************************************************************************/
+
+/* In diesem Abschnitt wird die verwendete Typographie der Website festgelegt.
+Dazu wird die Klasse .himym und die font-family himym definiert. Es wird dafür eine eigens hinzugefügte Schriftart
+namens DaxCondensed.tff verwendet, welche der Titelschrift von "How I Met Your Mother" sehr nahe kommt.
+Die eigentliche Schriftart von HIMYM wurde nicht verwendet, da sie kostenpflichtig ist.
+
+Sollte ein Browser die Schriftart nicht verwenden können, z.B. wenn eine entsprechende Option im Internet Explorer deaktiviert ist,
+bietet die Definition mit Sans-Serif eine Ausweichschrift.
+
+Es erfolgt auch eine Definition der Beschriftungen der linken Navigationsleiste.
+
+Desweiteren wird hier das Aussehen von Links im Allgemeinen festgelegt. Links sollen orange und fett erscheinen,
+damit sie im weißen Text auffallen.
+*/
+
+@font-face /*hepo*/
+{font-family: himym; src: url("../fonts/DaxCondensed.ttf");}
+
+div#leftnav ul li span /*hepo*/ 
+{position:absolute; left: 20px; top:12px; z-index:4; border:none; color:Black; font-family: himym,Sans-Serif,Times ; }
+
+.himym /*hepo*/ 
+{font-family:himym, Sans-Serif, Times; font-size:medium;} 
+ 
+ div#Text a /*hepo*/ 
+ {color: #f7911e; font-size:large; text-decoration:none; font-weight:bold;}
+ 
+ div#Text a:hover /*hepo*/ 
+ {color: #f76e4a;}
+
+/***********8.Sprechblasen*****************************************************************************************************************************************************/
+
+/* Die Funktionalität der Sprechblasen auf der gesamten Seite wird hier festgelegt.
+Dabei werden drei Elemente in einen Link eingefügt:
+
+Bubble              -   Beinhaltet das Bild der verwendeten Sprechblase, auf unserer Seite immer dasselbe;
+SpeechBubbleHead    -   Beinhaltet das Bild des Charakters, der über dem "sechsten Button" erscheint und so der Sprechblase zugeordnet wird;
+Span                -   Der Text, der in der Sprechblase dargestellt wird.
+
+Es gibt drei verschiedene Bereiche, in denen Sprechblasen auf unserer Seite verwendet werden.
+Sie erfordern jeweils eigene Positionierungen:
+
+ButtonNavigation    -   Sprechblasen, die zur Erklärung der Oberkategorien der Seite erscheinen;
+Bar                 -   Sprechblasen, die zur Erläuterung von hervorgehobenen Gegenständen auf der Bar-Seite erscheinen;
+Text                -   Sprechblasen, die im Fließtext auftauchende hervorgehobene Begriffe weiter erläutern.
+
+Alle Sprechblasen-Elemente befinden sich eigentlich in einem Link, werden aber nicht angezeigt. Über Positionierungs-Attribute werden sie
+weit außerhalb des Links geschoben. Fährt man mit der Maus über den entsprechenden Link, wird das hover-Attribut aktiviert und die
+entsprechenden Bilder sichtbar gemacht.
+*/
+
+img.Bubble,img.SpeechBubbleHead,#topnav ul li a span,div div a span.himym /*hepo*/ 
+{visibility:hidden;position:absolute;z-index:4;border:none;}
+
+/*********** ButtonNavigation *********************/
+
+#topnav ul li a img.Bubble /*hepo*/ 
+{top:162px;left: 452px; height: 140px; width: 200px;}
+
+#topnav ul li a img.SpeechBubbleHead /*hepo*/ 
+{top:53px;left: 582px; height: 111px; width: 108px;}
+
+#topnav ul li a span /*hepo*/ 
+{top:190px;left: 480px; height: 100px; width: 150px; color:Orange; font-family:himym, Sans-Serif, Times;}
+
+
+/*********** Text *********************************/
+
+#Text a img.SpeechBubbleHead /*hepo*/  
+{top:-117px;left: 577px; height: 111px; width: 108px;}
+
+/*********** Bar **********************************/
+
+div div.BarDiv a img.SpeechBubbleHead /*hepo*/ 
+{top:-217px;left: 577px; margin-top:100px; height: 111px; width: 108px;}
+
+/*********** Text und Bar *************************/
+
+#Text a img.Bubble, div div.BarDiv a img.Bubble /*hepo*/  
+{top:-8px;left: 447px; height: 140px; width: 200px;}
+
+div div a span.himym /*hepo*/  
+{top:20px;left: 475px; height: 100px; width: 150px;color:Orange; font-family:himym, Sans-Serif; font-weight:normal;font-size:medium;}
+
+/*********** Allgemein ***************************/
+
+#topnav ul li a:hover img ,#topnav ul li a:hover span,#Text a:hover img,div div.BarDiv a:hover img,div div a:hover span.himym /*hepo*/ 
+{visibility:visible; }
+
+/* Alle Elemente der Sprechblasen werden erst angezeigt, wenn die Maus über den dazugehörigen Link fährt.
+*/
+

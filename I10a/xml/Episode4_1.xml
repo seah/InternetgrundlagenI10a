@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<Episode>
+  <Titel>Willkommen</Titel>
+  <Beschreibung seiten="3">
+    <Seite id="1" lastpage="false">
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      beim durchstöbern der Seite.
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      beim durchstöbern der Seite.
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      beim durchstöbern der Seite.
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      beim durchstöbern der Seite.
+      <Link name="Linkname">!!!!!!Dies ist die URL des Links</Link>
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      <Link name="Linkname">123214545</Link>
+      beim durchstöbern der Seite.
+    </Seite>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>
+  </Beschreibung>
+</Episode>
