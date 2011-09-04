@@ -50,6 +50,7 @@ sondern auf dem lediglich andere Bilder dargestellt werden (siehe Sektion 8: Spr
     width:571px;
     background-image: url("../gfx/layout/header.png");
     background-repeat:no-repeat;
+visibility:hidden;
 }
 
 #topnav ul /*seah*/
@@ -95,7 +96,7 @@ ausgestattet, sodass Charaktere der Sendung weitere Erklärungen zu den Kategorie
 }
 
 #leftnav ul /*seah*/
-{top:150px; position:absolute; list-style:none;}
+{top:150px; position:absolute; list-style:none;visibility:hidden;}
 
 #Link1,#Link2,#Link3,#Link4,#Link5 /*hepo*/
 {
