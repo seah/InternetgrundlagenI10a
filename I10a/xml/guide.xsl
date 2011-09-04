@@ -172,8 +172,7 @@
                   <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Blub"/>
                   <span class="himym">
                     Die Mediensammlung.<br />
-                    Finde hier Bilder, Links und Videos rund um<br />
-                    How I Met Your Mother!
+                    Finde hier Bilder, Links und Videos!
                   </span>
                 </a>
               </li>
