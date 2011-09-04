@@ -1,15 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- XML-Datenstruktur seah -->
 <?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<!-- /seah/ Die Datenstruktur:
+	
+	Die Episode ist das Grundelement der XML.
+	
+	Der Titel muss mit dem Dateinamen korrespondieren,
+	damit die XSLT ordnungsgemäß blättern kann.
+	
+	Die Beschreibung enthält das Attribute @seiten
+	und gibt an wie viele Seiten die gesamte Beschrei-
+	bung hat. Diese Zahl wird in der XSL für die
+	Indexanzeige verwendet. Eingebettet in die 
+	Beschreibung ist das Element Seite.
+	
+	Das Element Seite enhält das Attribut @id, welche 
+	verwendet wird, um das Dokument zu blättern. Das 
+	Attribute @lastpage gibt dem XSL-skript an, ob die
+	Seite die letzte ist.
+	Innerhalb der Seite wird der eigentliche Beschrei-
+	bungstext geschrieben, welcher in der guide.xsl
+	ausgegeben wird.
+	
+	Die Seite kennt folgende Tags:
+	<h1></h1> wird dazu verwendet HTML-typisch eine
+	Überschrift abzubilden
+	
+	<Link></Link> erzeugt Links im Text. Link kennt
+	weiterhin folgende Attribute:
+	@name: erzeugt die Darstellung des Links.
+	@alt: erzeugt ein alt-Attribut für das Bild,
+	welches mit dem Link verknüpft ist.
+	@bild: gibt an, welches Bild oben in der Kopfleiste
+	angezeigt wird. 
+	Innerhalb des Tags wird dann der Link angegeben.
+	
+	Das Elemet Bild erzeugt Bilder in der neben-
+	stehenden Bildergalerie. Innerhalb des Tags
+	wird die url des Bildes angeben und das alt-
+	Attribut verhält sich HTML-typisch.
+	
+	
+	
+	 -->
 <Episode>
   <Titel>Episode1</Titel>
   <Beschreibung seiten="3">
     <Seite id="1" lastpage="false">
-	<h1>Dies ist die erste Folge von How i met your mother</h1>
-Die ist die erste Episode von How i met your mother.
-            <Link name="Linkname" alt="Blub" bild="HighlightButton6">!!!!!!Dies ist die URL des Links</Link>
+      <h1>Willkommen</h1>
       Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
       paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      <Link name="Linkname">123214545</Link>
+      beim durchstöbern der Seite.
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      beim durchstöbern der Seite.
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      beim durchstöbern der Seite.
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      beim durchstöbern der Seite.
+      <Link name="Linkname" alt="Blub" bild="HighlightButton6">!!!!!!Dies ist die URL des Links</Link>
+      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
+      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
+      <Link name="Linkname" alt="Blub2" bild="HighlightButton6">123214545</Link>
       beim durchstöbern der Seite.
     </Seite>
     <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>

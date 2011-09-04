@@ -9,6 +9,7 @@
  * 6.Das Quiz               /seka/
  * 7.Typographie            /hepo/
  * 8.Sprechblasen           /hepo/
+ * 9.Episodenguide          /seah/
  * 
  *
  * Schlüssel für Verantwortungsbereiche:
@@ -396,3 +397,16 @@ div div a span.himym /*hepo*/
 /* Alle Elemente der Sprechblasen werden erst angezeigt, wenn die Maus über den dazugehörigen Link fährt.
 */
 
+/***********9.Episodenguide**********************************************************************************************************************************************************/
+
+.navbtn 
+{
+    float:left;
+    margin-right:30px;
+}
+
+#index
+{
+    position:absolute;
+    top: 400px;
+}

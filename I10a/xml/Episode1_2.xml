@@ -3,7 +3,7 @@
 <Episode>
   <Titel>Episode1</Titel>
   <Beschreibung seiten="3">
-    <Seite id="2" lastpage="true">
+    <Seite id="2" lastpage="false">
 	<h1>So das war´s erstmal zur Beschreibung.</h1>
 Die ist die erste Episode von How i met your mother.
       <Link name="Linkname">!!!!!!Dies ist die URL des Links</Link>

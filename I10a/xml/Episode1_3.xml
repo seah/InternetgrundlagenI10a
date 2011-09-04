@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="guide.xsl"?>
 <Episode>
-  <Titel>Willkommen</Titel>
+  <Titel>Episode1</Titel>
   <Beschreibung seiten="3">
-    <Seite id="1" lastpage="false">
+    <Seite id="3" lastpage="true">
       Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
       paar Informationen von "How I met your mother" einzusehen. Viel Spaß
       beim durchstöbern der Seite.
