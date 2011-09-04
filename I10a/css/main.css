@@ -71,7 +71,7 @@ sondern auf dem lediglich andere Bilder dargestellt werden (siehe Sektion 8: Spr
 }
 
 #Impressum a /*hepo*/
-{position: absolute; width:125px;height:40px;top:560px;left:10px;z-index:4;background-image:url("../gfx/layout/Impressum.png");}
+{position: absolute; width:125px;height:40px;top:540px;left:35px;z-index:4;background-image:url("../gfx/layout/Impressum.png");}
 
 /***********3.Navigation*******************************************************************************************************************************************************/
 
@@ -103,7 +103,7 @@ z-index: 1;
 right:20px;
 width:125px;
 height:46px;
-margin:auto;
+padding:auto;
 text-align: center;
 }
 
@@ -278,7 +278,7 @@ div#Quizbilder /*seka*/
 {z-index: 0; width: 650px; height: 270px;}
 
 div#Bild /*seka*/
-{z-index: 3; border-color:Orange; border-width:3px; border-style:groove;}
+{z-index: 3; border-color:Orange; border-width:3; border-style:groove;}
 
 div#Quiztext /*seka*/
 {top:225px; left:0px; width: 650px; height: 130px; z-index: 2; color:Orange; background-color:transparent;}
@@ -290,10 +290,10 @@ div#reset /*seka*/
 {top:50px; width: 650px; left:0px; height:50px;}
 
 div#welcome /*seka*/
-{top:50px; width: 650px; left:0px; height:50px;}
+{top:50px; width: 650px; left:0px; height:50;}
 
 div#eingabe /*seka*/
-{top:50px; width: 650px; left:0px; height:80px;}
+{top:50px; width: 650px; left:0px; height:80;}
 
 div#eingabe div p /*seka*/ 
 {margin-top:5px; margin-bottom:5px; background-color:black; font-size:0;}
@@ -328,11 +328,14 @@ div#leftnav ul li span /*hepo*/
 
 .himym /*hepo*/ 
 {font-family:himym, Sans-Serif, Times; font-size:medium;} 
+
+.smallfont /*hepo*/
+{font-size:small; font-family:himym, Sans-Serif, Times New Roman;}
  
- div#Text a /*hepo*/ 
+ div#Text a, div#Medientext a /*hepo*/ 
  {color: #f7911e; font-size:large; text-decoration:none; font-weight:bold;}
  
- div#Text a:hover /*hepo*/ 
+ div#Text a:hover, div#Medientext a:hover /*hepo*/ 
  {color: #f76e4a;}
 
 /***********8.Sprechblasen*****************************************************************************************************************************************************/
