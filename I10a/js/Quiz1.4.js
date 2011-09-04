@@ -49,7 +49,7 @@ Schritt 2: Das Einleiten eines Quizversuchs
 2.)In dieser ist eine Aufforderung zum Neustart vorhanden, die von einem Link umschlossen ist, der onClick die funktion "reset" ausführt. 
 3.)Diese Funktion setzt die Anzahl der Versuche auf +1, 
 4.)setzt den Quizstand auf 0, 
-5.)verdeckt über die funktion ZumAnfang das div mit der Versuchsauswertung, zeigt durch letztere das div für die Antwortauswahl an und startet die Quizfunktion.    
+5.)verdeckt über die funktion ZumAnfang die div mit der Versuchsauswertung, zeigt durch letztere die div für die Antwortauswahl an und startet die Quizfunktion.    
 
 Schritt 3.1: Die Quizfunktion stellt eine Quizstage dar
 
@@ -61,17 +61,49 @@ Schritt 3.1: Die Quizfunktion stellt eine Quizstage dar
 
 Schritt 3.2: Die Quizfunktion stellt die Möglichkeiten zu der Quizstage dar
 
-1.)Jede Möglichkeit besteht aus drei Teilen ( für eine Erläuterung siehe 3.2.Arrays: Handlungsstränge & Reaktionen). 
-2.)Da die Anzahl der Wahlmöglichkeiten je nach Stage variieren kann, prüft die "Quiz" funktion, ob es zu jeder Radiobox eine Antwortmöglichkeit gibt. 
-3.)Der dritte Teil der Möglichkeit wird abgefragt. Handelt es sich bei der 
-3.)Gibt es eine Radiobox ohne Antwortmöglichkeit, wird diese ausgeblendet.
-4.)Radioboxen die zuvor ausgelendet wurden, weil es für sie keine Antwortmöglichkeit gab, werden, falls ihnen bei der aktuell dargestellten Stage eine Antwortmöglichkeit zugewiesen ist, eingeblendet.
-Die ersten beiden Teile jeder Möglichkeit der aktuellen Quizstage werden an die span Elemente hinter den Radiobuttons in der div übergeben. Die Id des Spans dieser 
+1.)"mreaktion" ist das Array für die Möglichkeiten. Jede Möglichkeit besteht aus drei Teilen. Einem Intro, einer Beschreibung und einer Wertung(für eine Erläuterung siehe 3.2.Arrays: Handlungsstränge & Reaktionen).
+2.)Jede Möglichkeit aus dem Array steht in einem funktionalen Kontext mit je einem Radiobutton. Durch die "Quiz"-Funktion wird dieser Kontext in der html sichtbar gebracht.
+2.1.)Dies geschieht durch eine Schleife, die die ersten zwei Teile einer Wahlmöglichkeit in die span -Elemente neben den zugeordneten Radiobutton schreibt. (Siehe Kommentar in der .htm neben dem div mit der id="eingabe".)
+3.)Da die Anzahl der Wahlmöglichkeiten je nach Stage variieren kann, prüft die "Quiz" -Funktion bei jedem Radiobutton, ob die Wertung der Antwortmöglichkeit, die mit diesem in einen visuellen Kontext gesetzt werden soll, "none" ist. 
+3.1)Ist die Wertung none handelt es sich um eine nicht benötigte Antwortmöglichkeit. Der zu ihr gehörige Radiobutton wird durch die "Quiz" -Funktion ausgeblendet.
+3.2)Radiobuttons die zuvor ausgelendet wurden, werden, falls ihnen bei der aktuellen Stage eine Antwortmöglichkeit zugewiesen ist, eingeblendet.
+4.)Die ersten beiden Teile einer jeden Möglichkeit der aktuellen Quizstage werden in den span Elementen hinter dem Radiobutton, der sie representiert angezeigt. 
+5.)Bewegt ein Nutzer den Mauszeiger über das span -Element mit dem Intro einer Möglichkeit, wird ihm die Detailbeschreibung aus dem anderen, zur Möglichkeit gehörenden, span -Element der angezeigt (für eine technische Erläuterung siehe main.css Abschnitt 6 Kommentar x und .htm siehe p- Element in der div id="show1").
+6.)Nach einer Auswahl der Antwort wird mit Klick auf den Button mit dem value="Das ist meine Antwort" die funktion "ladeSzenario" ausgeführt.
+7.)Diese übernimmt die Auswertung der gewählten Antwort.
 
-Schritt 3: Auswertung
+Schritt 4: Auswertung einer Antwort 
+
+1.)Durch die Funktion "ladeSzenario" wird ermittelt, welche Radiobox ausgewählt wurde.
+2.)Diese ermittelt die zur ausgewählten Radiobox gehörige Antwortmöglichkeit.
+3.)Der dritte Teil der ausgewählten Möglichkeit, in dem sich die Wertigkeit der Antwort befindet wird von "ladeSzenrio" aus dem Array mhandlung bezogen.
+4.)Als nächstes wird mit dem erhöhen der Variable "vstand" der Quizstand heraufgesetzt. 
+5.)Danach wird festgelegt, was basierend auf der gegebenen Antwort passieren soll. Die Wertigkeit der gegebenen Antwort wird einer case- Abfrage unterzogen.
+6.a.)Die Antwort entspricht in der Wertigkeit 0 oder 1. ->Das Quiz endet aufgrund der Auswahl einer "sehr schlechten" Antwort. 
+6.a.1.)Die Anzahl der sehr schlechten Antworten wird erhöht.
+6.a.2.)Das Bild zu dem jeweiligen Fehlschlagszenario wird geladen und der entsprechende Text zur Niederlage in die div (id="Stage")geladen.
+6.a.3.)Die Funktion ZumAnfang wird ausgeführt, sodass die div (id="eingabe") versteckt und die div mit der id="reset" angezeigt wird. 
+6.a.4.)Die reset- div zeigt die Auswertung des Versuchs und den Link für den Neustart des Quiz an.(Das Prozedere würde bei Schritt 2 Variante (b) ansetzen)
+6.b.)Die Antwort entspricht der Wertigkeit 2. ->Weil die Antwort ok ist, geht das Quiz mit dem bei 4.) heraufgesetzten Quizstand weiter oder endet einer Erfolgsmeldung.
+6.b.1)Die Anzahl der Antworten, die ok waren, wird erhöht.
+6.b.1)Es wird geprüft, ob der Quizstand auf den finalen Stand erhöht wurde.
+6.b.a)Der Quizstand ist der finale Stand.
+6.b.a.1)Die Verkündung des Sieges wird in die div (id="Stage")geladen und das passende Bild wird angezeigt. 
+6.b.a.2)Es wird verfahren wie bei (6.a.3) und (6.a.4)
+6.b.b)Der Quizstand ist nicht der fianle Stand.
+6.b.b.1)Die Quiz Funktion wird ausgeführt.
+6.c.)Die Antwort entspricht der Wertigkeit 3. -> Das Quiz geht mit dem bei 4.) heraufgesetzten Quizstand + 1 weiter (weil die Antwort gut war, wird eine Quizinstanz übersprungen) oder endet mit einem Erfolg. 
+6.c.1)Die Variable "vstand" wird zum überspringen der nächsten Quizinstanz erhöht (gemäß 6.c.)).
+6.c.2)Die Anzahl der Antworten, die gut waren wird erhöht.
+6.c.3)Es wird geprüft, ob der Quizstand auf den finalen Stand erhöht wurde, oder darüber hinaus.
+6.c.a)Der Quizstand ist der finale Stand. Weiter verfahren wie bei 6.b.a.1) und bei 6.b.a.2)
+6.c.b)Der Quizstand ist nicht der fianle Stand. Weiter verfahren wie bei 6.b.b.1)
+6.d.)Die Antwort entspricht der Wertigkeit 4. ->Weil die Antwort schlecht ist, entfernt man sich wieder von dem Ziel. Das Quiz setzt bei dem zuletzt erfolgreich beantworteten Quizstand wieder an.
+6.d.1)Die Variable "vstand" wird zum zurückversetzen des Quizstandes gemäß 6.d. um 2 reduziert.
+6.d.2)Die Anzahl der schlechten Antworten wird erhöht.
+6.d.3)Die Quiz -Funktion wird ausgeführt.
 
 
-Schritt 4: Abweichungen bei der Darstellung der weiteren Quizstages
 
 
 /***********2.Funktionen**********************************************************************************************************************************************************/
@@ -107,7 +139,7 @@ function Quiz()
     else {
 
         vjetzigerMS = mhandlung[vstand][strang];/*Die Beschreibung des aktuellen Standes wird aus dem Array "mhandlung" bezogen. */
-        schreibe(vjetzigerMS, 'Stage'); /* Die Beschreibung wird in das Div mit der Id="Stage" geschrieben */
+        schreibe(vjetzigerMS, 'Stage'); /* Die Beschreibung wird in die Div mit der Id="Stage" geschrieben */
         var l = 0; /* l ist eine Laufvariable für das Array "mreaktion" */
         for (var k = 0; k < document.getElementsByName("Handlung").length; k++) /* Mit der Schleife werden alle Radiobuttons für die Handlungsmöglichkeiten durchlaufen. */
             {
@@ -134,8 +166,8 @@ function Quiz()
 * Desweiteren aktiviert sie die "schreibe" Funktion für den dynamischen Text der Willkommensmaske*/
 
 function ZumAnfang(vreset, veingabe) {
-    document.getElementById('reset').style.visibility = vreset;/*Das div mit der Id="reset" wird an dieser Stelle sichtbar oder unsichtbar gemacht.*/
-    document.getElementById('eingabe').style.visibility = veingabe; /*Das div mit der Id="eingabe" wird an dieser Stelle sichtbar oder unsichtbar gemacht.*/
+    document.getElementById('reset').style.visibility = vreset;/*Die div mit der Id="reset" wird an dieser Stelle sichtbar oder unsichtbar gemacht.*/
+    document.getElementById('eingabe').style.visibility = veingabe; /*Die div mit der Id="eingabe" wird an dieser Stelle sichtbar oder unsichtbar gemacht.*/
     if (vreset == "visible") {/*Anzeigen der Auswertung nach Quizbearbeitung*/
         vguteantworten = vguteantworten + vantwortgut; /*Die Summe der guten Antworten aller Versuche wird um die Summe der guten Antworten dieses Versuches erhöht. Ebenso wird mit den entsprechenden Variablen aller anderen Antwortkategoien verfahren. */
         vokantworten = vokantworten + vantwortok;/*s.o.*/
@@ -154,7 +186,7 @@ function ZumAnfang(vreset, veingabe) {
     }
     if (vreset == "hidden" && veingabe == "hidden") {/*Prüfe ob eine die div mit der Id="Eingabe" oder mit der Id="reset" sichtbar ist*/ 
         document.getElementById('welcome').style.visibility = "visible";/*Anzeigen der Willkommensmaske */
-        schreibe("Willkommen zu dem offiziellen HIMYM Quiz. Das Singleleben in NewYork und dein Wingman, die HIMYM Flirtlegende Barney Stinson, erwarten dich. Wird das der Tag sein, von dem du eines Tages deinen Kindern erzählen wirst?", "Stage");/*Begrüßungstext wird in das div mit der Id="Stage geschrieben*/
+        schreibe("Willkommen zu dem offiziellen HIMYM Quiz. Das Singleleben in NewYork und dein Wingman, die HIMYM Flirtlegende Barney Stinson, erwarten dich. Wird das der Tag sein, von dem du eines Tages deinen Kindern erzählen wirst?", "Stage");/*Begrüßungstext wird in die div mit der Id="Stage geschrieben*/
     }
 }
 
@@ -174,7 +206,7 @@ function ZumAnfang(vreset, veingabe) {
         else 
             {
 
-            document.getElementById(id).textContent = text; /* Wird von IE nicht erkannt daafür aber von Firefox*/
+            document.getElementById(id).textContent = text; /* Wird von IE nicht erkannt, stattdessen aber von Firefox*/
             }
 }
 
@@ -185,7 +217,7 @@ function ZumAnfang(vreset, veingabe) {
 
 /*dieses Skript wird aufgerufen, wenn der user eine Eingabe tätigt.
 *Es wird geprüft, ob die Eingabe des Users zu einem Endszenario führt.
-*Falls ja wird eine entsprechende Rückmeldung in das div mit der id="Stage" geschrieben,
+*Falls ja wird eine entsprechende Rückmeldung in die div mit der id="Stage" geschrieben,
 *das entsprechende Bild angezeigt und die Funktion ZumAnfang gestartet.
 *Anderenfalls wird die Funktion Quiz mit vstand+1 gestartet.
 */
@@ -198,7 +230,7 @@ function ladeSzenario()
                 var vdastuich = document.getElementsByName("Handlung")[j].value; /* Der Wert des gecheckten Buttons wird bezogen.*/
             }
         }
-    switch (vdastuich)/* Der Wert des gecheckten Buttons liegt (
+        switch (vdastuich)/* Durch diese case- Abfrage wird ermittelt, welche Wertigkeit der ausgewählten Möglichkeit entspricht.*/
         {
         case "a":
             var vdaspassiert = mreaktion[vstand][2];
@@ -224,7 +256,7 @@ function ladeSzenario()
     vstand = vstand + 1;
 
 
-    switch (vdaspassiert) 
+    switch (vdaspassiert) /* Durch diese case- Abfrage wird festgelegt, welche Konsequenz die Antwort hat*/
         {
         case 0:
             vantwortsehrschlecht = 1;
@@ -276,7 +308,7 @@ function ladeSzenario()
             break;
 
         case 4:
-            vstand = vstand - 1;
+            vstand = vstand - 2;
             vantwortschlecht = vantwortschlecht + 1;
             Quiz();            
             break;

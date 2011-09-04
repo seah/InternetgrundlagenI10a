@@ -6,7 +6,7 @@
     <title>How I Met Your Mother - Das Quiz</title> <!-- hepo -->
   <link rel="stylesheet" type="text/css" href="../css/main.css"/>
 <!--seka: hier ist die Quiz-js -->
-  <script type="text/javascript" src="../js/Quiz1.5probe.js" charset="ISO-8859-15"></script><!-- ISO musste für javascript sein-->
+  <script type="text/javascript" src="../js/Quiz1.4.js" charset="ISO-8859-15"></script><!-- ISO musste für javascript sein-->
 <!-- ;)  -->
 </head>
 <body onload="javascript:Quiz();">
@@ -29,20 +29,20 @@
         <a href="HIMYM_Impressum.htm"></a>
     </div>
 
-    <div id="topnav"> <!-- seah -->
+<div id="topnav"> <!-- seah -->
         <ul>
             <li id="Button1">
                 <a href="../index.htm">
-                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
-                    <img class="SpeechBubbleHead" src="../gfx/layout/RobinBubble.png" alt="Robin Profil"/>
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/TedBubble.png" alt="Blub"/>
                     <span class="himym">Die Startseite mit News <br /> und Übersicht!</span>
                 </a>
             </li>
   
             <li id="Button2">
                 <a href="HIMYM_Bar.htm">
-                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
-                    <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Marshall Profil"/>
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/RobinBubble.png" alt="Blub"/>
                     <span class="himym">Die Bar von How I Met Your Mother.<br />
                     Durchstöbere Mc Laren's!</span>
                 </a>
@@ -50,8 +50,8 @@
   
             <li id="Button3">
                 <a href="HIMYM_Quiz.htm">
-                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
-                    <img class="SpeechBubbleHead" src="../gfx/layout/BarneyBubble.png" alt="Barney Profil"/>
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/BarneyBubble.png" alt="Blub"/>
                     <span class="himym">Das ultimate Quiz mit Barney Stinson.<br />
                     Teste dein Wissen vom Bro-Code!</span>
                 </a>
@@ -59,8 +59,8 @@
   
             <li id="Button4">
                 <a  href="HIMYM_Show.htm">
-                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
-                    <img class="SpeechBubbleHead" src="../gfx/layout/TedBubble.png" alt="Ted Profil"/>
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Blub"/>
                     <span class="himym">Infos über die Show.<br />
                     Mit Episoden-Guide und Charakterinfos!</span>
                 </a>
@@ -68,10 +68,11 @@
   
             <li id="Button5">
                 <a href="HIMYM_Medien.htm">
-                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
-                    <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Lily Profil"/>
+                    <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
+                    <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Blub"/>
                     <span class="himym">Die Mediensammlung.<br />
-                    Finde hier Bilder, Links und Videos!</span>
+                    Finde hier Bilder, Links und Videos rund um<br />
+                    How I Met Your Mother!</span>
                 </a>
             </li>
       </ul>
@@ -119,6 +120,8 @@
             </form>
          </div>
             <div id="eingabe" style="visibility:visible;">
+            <!-- Zu jedem der 4 folgenden Radiobuttons wird aus dem Array mhandlung eine nebenstehende erste Zeile und 
+            eine bei hover unter dieser auftauchende Beschreibung abgebildet. -->
             <form action="">
                     
                         <div id="show1">
