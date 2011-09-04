@@ -71,7 +71,7 @@ sondern auf dem lediglich andere Bilder dargestellt werden (siehe Sektion 8: Spr
 }
 
 #Impressum a /*hepo*/
-{position: absolute; width:125px;height:40px;top:560px;left:10px;z-index:4;background-image:url("../gfx/layout/Impressum.png");}
+{position: absolute; width:125px;height:40px;top:540px;left:35px;z-index:4;background-image:url("../gfx/layout/Impressum.png");}
 
 /***********3.Navigation*******************************************************************************************************************************************************/
 
