@@ -219,9 +219,6 @@ Desweiteren wird hier das Aussehen von Links im Allgemeinen festgelegt. Links so
 damit sie im weiﬂen Text auffallen.
 */
 
-@font-face /*hepo*/
-{font-family: himym; src: url("../fonts/DaxCondensed.ttf");}
-
 .himym /*hepo*/ 
 {font-family:himym, Serif, Times; font-size:25px;} 
  
