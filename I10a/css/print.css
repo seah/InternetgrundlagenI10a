@@ -25,7 +25,6 @@
 body,html /*seah*/
 {background-color:#000000; visibility:hidden;}
 
-
 div#Layout /*hepo*/
 {
 position:relative; /*seah*/
@@ -92,6 +91,7 @@ ausgestattet, sodass Charaktere der Sendung weitere Erklärungen zu den Kategorie
     float:left;
     z-index: 1;
     position:absolute;
+    visibility:hidden;
 }
 
 #leftnav ul /*seah*/
@@ -106,33 +106,8 @@ width:125px;
 height:46px;
 padding:auto;
 text-align: center;
+visibility:hidden;
 }
-
-/* Es gibt bis zu fünf Links, die relativ in einer absolut positionierten Liste angeordnet sind.
-Die Anzahl der Links wäre theoretisch nach Belieben erweiterbar.
-*/
-
-#Link1 /*hepo*/
-{background-image:url("../gfx/layout/Link1.png");}
-
-#Link2 /*hepo*/
-{background-image:url("../gfx/layout/Link2.png");}
-
-#Link3 /*hepo*/
-{background-image:url("../gfx/layout/Link3.png");}
-
-#Link4 /*hepo*/
-{background-image:url("../gfx/layout/Link4.png");}
-
-#Link5 /*hepo*/
-{background-image:url("../gfx/layout/Link5.png");}
-
-li a /*seah*/
-{text-decoration:none;color:#000000;}
-
-/* Bei den Bildern der Links handelt es sich um leere Flächen.
-Mittels eines speziell formatierten <span>-Elements in der HTML werden die Links mit Beschriftung versehen.
-*/
 
 /***********ButtonNavigation*********/
 
@@ -147,6 +122,7 @@ Auf diese Weise ist eine gleichbleibende Position aller Sprechblasen bei allen B
 
 #Button1 a,#Button2 a,#Button3 a,#Button4 a,#Button5 a /*hepo*/
 {
+    visibility:hidden;
 position:static;
 width: 54px;
 height: 111px;
@@ -156,36 +132,6 @@ margin-left: 15px;
 margin-top: 45px;
 float:left;
 }
-
-#Button1 a /*hepo*/ 
-{margin-left: 200px;background-image: url("../gfx/layout/Button1.png");}
-
-#Button1 a:hover /*hepo*/ 
-{background-image: url("../gfx/layout/HighlightButton1.png");}
-
-#Button2 a /*hepo*/ 
-{background-image: url("../gfx/layout/Button2.png");}
-
-#Button2 a:hover /*hepo*/ 
-{background-image: url("../gfx/layout/HighlightButton2.png");}
-
-#Button3 a /*hepo*/ 
-{background-image: url("../gfx/layout/Button3.png");}
-
-#Button3 a:hover /*hepo*/ 
-{background-image: url("../gfx/layout/HighlightButton3.png");}
-
-#Button4 a /*hepo*/ 
-{background-image: url("../gfx/layout/Button4.png");}
-
-#Button4 a:hover /*hepo*/
-{background-image: url("../gfx/layout/HighlightButton4.png");}
-
-#Button5 a /*hepo*/ 
-{background-image: url("../gfx/layout/Button5.png");}
-
-#Button5 a:hover /*hepo*/ 
-{background-image: url("../gfx/layout/HighlightButton5.png");}
 
 /***********4.Content**********************************************************************************************************************************************************/
 
@@ -201,40 +147,25 @@ div#Content, div#Text, div#Medientext, div#Bilder /*hepo*/
 
 div#Content /*hepo*/
 {
-top:170px;
-left:165px;
-width: 760px;
-height: 430px;
+visibility:hidden;
 }
 
 div#Text /*hepo*/
 {
-width: 480px;
-height: 420px;
+visibility:visible;
+position:static;
 text-align:justify;
-background-image:url("../gfx/layout/textbox.png");
-padding:5px;
 }
 
 div#Medientext /*hepo*/
 {
-width: 675px;
-height: 430px;
+visibility:visible;
 text-align:justify;
-background-image:url("../gfx/layout/textbox.png");
-padding:5px;
-overflow:scroll;
 }
 
 div#Bilder /*hepo*/
 {
-left: 500px;
-width: 180px;
-height: 425px;
-background-image:url("../gfx/layout/bilderbox.png");
-z-index: 0;
-padding-top:5px;
-padding-left:5px;
+visibility:hidden;
 }
 
 /***********5.Die Bar**********************************************************************************************************************************************************/
@@ -250,60 +181,27 @@ Dieses Elternelement ist hier die Div-Box Text. So sind gleich positionierte Spr
 */
 
 .BarDiv a /*hepo*/
-{width: 100px; height: 100px; z-index: 4; float:left;  }
+{visibility:hidden; }
 
 #Div1 a /*hepo*/
-{margin-top:50px; border-width:3px; border-color:#6B1705; border-style:solid;}
+{visibility:hidden; }
 
 #Div2 a /*hepo*/
-{margin-left:200px; border-width:3px; border-color:#6B1705; border-style:solid;}
+{visibility:hidden; }
 
 #Div3 a /*hepo*/
-{margin-left:300px; margin-top:50px; border-width:3px; border-color:#6B1705; border-style:solid;}
+{visibility:hidden; }
 
 div div.BarDiv a:hover /*hepo*/
-{background-image:url("../gfx/layout/HighlightButton3.png");}
+{visibility:hidden; }
 
 div#Barcontent /*hepo*/
-{position:absolute; top:170px; left:165px; width: 700px; height: 430px; z-index: 1; background-image:url("../gfx/layout/BackgroundBar.jpg"); background-repeat:no-repeat; }
+{visibility:hidden; }
 
 /***********6.Das Quiz*********************************************************************************************************************************************************/
 
-/* ???????????????????????????????
-*/
-
 div#Quizbilder,div#Bild,div#Quiztext,#Stage,div#reset,div#welcome,div#eingabe /*seka*/
-{position:absolute;}
-
-div#Quizbilder /*seka*/
-{z-index: 0; width: 650px; height: 270px;}
-
-div#Bild /*seka*/
-{z-index: 3; border-color:Orange; border-width:3; border-style:groove;}
-
-div#Quiztext /*seka*/
-{top:225px; left:0px; width: 650px; height: 130px; z-index: 2; color:Orange; background-color:transparent;}
-
-#Stage /*seka*/
-{width: 500px; left: 0px; bottom:15px; z-index: 4; color:orange;}
-
-div#reset /*seka*/
-{top:50px; width: 650px; left:0px; height:50px;}
-
-div#welcome /*seka*/
-{top:50px; width: 650px; left:0px; height:50;}
-
-div#eingabe /*seka*/
-{top:50px; width: 650px; left:0px; height:80;}
-
-div#eingabe div p /*seka*/ 
-{margin-top:5px; margin-bottom:5px; background-color:black; font-size:0;}
-
-div#eingabe div p:first-line /*seka*/
-{color:Orange;font-size:medium;}
-
-div#eingabe div p:hover /*seka*/
-{font-size:medium;}    
+{visibility:hidden;}
 
 /***********7.Typographie******************************************************************************************************************************************************/
 
@@ -324,17 +222,11 @@ damit sie im weißen Text auffallen.
 @font-face /*hepo*/
 {font-family: himym; src: url("../fonts/DaxCondensed.ttf");}
 
-div#leftnav ul li span /*hepo*/ 
-{position:absolute; left: 20px; top:12px; z-index:4; border:none; color:Black; font-family: himym,Sans-Serif,Times ; }
-
 .himym /*hepo*/ 
-{font-family:himym, Sans-Serif, Times; font-size:medium;} 
+{font-family:himym, Serif, Times; font-size:25px;} 
  
  div#Text a /*hepo*/ 
- {color: #f7911e; font-size:large; text-decoration:none; font-weight:bold;}
- 
- div#Text a:hover /*hepo*/ 
- {color: #f76e4a;}
+ {color: #555555; font-size:25px; text-decoration:none; font-weight:bold;}
 
 /***********8.Sprechblasen*****************************************************************************************************************************************************/
 
@@ -393,7 +285,7 @@ div div a span.himym /*hepo*/
 /*********** Allgemein ***************************/
 
 #topnav ul li a:hover img ,#topnav ul li a:hover span,#Text a:hover img,div div.BarDiv a:hover img,div div a:hover span.himym /*hepo*/ 
-{visibility:visible; }
+{visibility:hidden; }
 
 /* Alle Elemente der Sprechblasen werden erst angezeigt, wenn die Maus über den dazugehörigen Link fährt.
 */
@@ -402,12 +294,10 @@ div div a span.himym /*hepo*/
 
 .navbtn 
 {
-    float:left;
-    margin-right:30px;
+    visibility:hidden;
 }
 
 #index
 {
-    position:absolute;
-    top: 400px;
+    visibility:hidden;
 }
