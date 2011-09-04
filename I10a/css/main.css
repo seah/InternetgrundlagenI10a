@@ -32,6 +32,7 @@ width: 850px;
 height: 600px;
 margin: auto;
 z-index: 0; /*seah*/
+background-image: url("../gfx/layout/Background.png");
 }
 
 /***********2.Header***********************************************************************************************************************************************************/
@@ -320,9 +321,12 @@ Desweiteren wird hier das Aussehen von Links im Allgemeinen festgelegt. Links so
 damit sie im weiﬂen Text auffallen.
 */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0b070c1bf0e13a85349101aef687764e3746ec72
 div#leftnav ul li span /*hepo*/ 
-{position:absolute; left: 20px; top:12px; z-index:4; border:none; color:Black; font-family: himym,Sans-Serif,Times ; }
+{position:absolute; left: 20px; top:12px; z-index:4; border:none; color:Black; font-family: Sans-Serif,Times ; }
 
 .himym /*hepo*/ 
 {font-family:Sans-Serif, Times; font-size:medium;} 
