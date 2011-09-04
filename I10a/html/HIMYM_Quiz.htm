@@ -13,7 +13,7 @@
 <div id="Layout"> <!-- seah: Neustukturierung der Seite. Elemente sind nun geschachtelt und mittig zentriert. -->
  
 
-  <div id="leftnav"> <!-- seah -->
+  <div id="leftnav"> <!-- seka -->
         <!-- Im "leftnav" - Div wird die Auswertung des Quiz angezeigt.-->
         <span id="Span1"></span>'s Statistik zu Versuch Nr.
         <span id="Span2"></span><br />
@@ -79,48 +79,91 @@
   </div>
 
   <div id="Button6"></div>
-
+  
   <div id="Content">
-      
-  <div id="Quizbilder">
-  <!--In diese Divbox wird ein Bild und eine Textbeschreibung geschrieben die das aktuelle Quizszenario widerspiegelt -->
-  <img src="" id="Bild" width="650px" height="270px" alt="nix"/><!-- Bild wird aus der -->
-    <span id="Stage">
-  </span>
-  </div>
+  <!-- seka -->    
+     <div id="Quizbilder">
+     <!--
+     In dieser Divbox wird das Bild angezeigt und die Textbeschreibung geschrieben, die den aktuellen Quizsstand widerspiegeln.
+     Die Quelle des Bildes (id="Bild") wird ebenso wie der Inhalt des span (id="Stage")durch die Funktion Quiz, oder die Funktion Scenario eingespielt.
+     -->
+       <img src="" id="Bild" width="650px" height="270px" alt="nix"/>
+       <span id="Stage">
+       </span>
+     </div>
 
 
 
     <div id="Quiztext">
-        <div id="reset" style="visibility:hidden;"><span id="name"></span>'s Statistik zu Versuch Nr.<span id="versuch"></span><br />
-        <span id="Statistik1"></span><br /><span id="Statistik2"></span><br /><span id="Statistik3"></span><br /><span id="Statistik4">
-        </span><br /><a href="javascript:reset()" >Versuche es nochmal</a></div>
+    <!-- 
+    In dieser Divbox wird immer jeweils eine der enthaltenen Divboxen angezeigt. Dies ist abhängig davon, ob der Spieler sich noch anmelden muss(Divbox mit der id="welcome"), 
+    eine Antwort wählen soll(Divbox mit der id="eingabe"), oder seinen Quizversuch beendet hat (Divbox mit der id="reset"). 
+    -->
 
-        <div id="welcome" style="visibility:hidden">
-        <form action="" name="anmeldung">
-        <input type="text" name="sname"/>
-        <input type="button" onclick="go();" value="Zum Quiz" />
-        </form></div>
-        <div id="eingabe" style="visibility:visible;">
-        <form action="">
+        <div id="reset" style="visibility:hidden;"><!--Diese Divbox enthält die Anzeige der Auswertung eines Versuchs mit Neustartaufforderung-->
+            <span id="name"><!--Spielername--></span>
+            's Statistik zu Versuch Nr.
+            <span id="versuch"><!--Versuchsnummer--></span><br />
+            <!-- Es folgen die spans mit den Id Statistik1-Statistik4. Sie dienen der Darstellung der Antworthäufigkeit je Antwortkathegorie.-->
+            <span id="Statistik1"></span><br />
+            <span id="Statistik2"></span><br />
+            <span id="Statistik3"></span><br />
+            <span id="Statistik4"></span><br />
+            <!-- Es folgt der Link mit dem die Funktion für das Starten eines neuen Versuchs aufgerufen wird-->
+            <a href="javascript:reset()" >Versuche es nochmal</a>
+        </div>
+
+        <div id="welcome" style="visibility:hidden"><!-- Diese Divbox enthät die Willkommensmaske (siehe Schritt 1)-->
+            <form action="" name="anmeldung">
+            <input type="text" name="sname"/><!-- Eingabefeld für den spielernamen. Muss mindestens ein Zeichen haben, sonst startet das Quiz nicht.-->
+            <input type="button" onclick="go();" value="Zum Quiz" /><!-- Diese Funktion setzt den spielernamen als Variable und führt zum Laden des ersten Quizszenarios. -->
+            </form>
+         </div>
+            <div id="eingabe" style="visibility:visible;">
+            <form action="">
                     
-                        <div id="show1"><p><input type="radio" name="Handlung" value="a"/><b><span class="weiterlesen" id="moeglichkeit1Intro">Möglichkeit1<br/>
-                        </span></b><br/><span class="moeglichkeit" id="Moeglichkeit1">                    
-                        </span></p></div>
+                        <div id="show1">
+                            <p><!-- Der von diesem "p"-Tag eingeschlossene Bereich wird angezeigt, 
+                            wenn der Benutzer mit der Maus über den, 
+                            von dem nachfolgenden "b" Tag eingeschlossenen Bereich geht. 
+                            Siehe main.css Kapitel 6 für eine Erläuterung. 
+                            Selbiges gilt auch für die nachfolgenden "p" Elemente in dem div mit der Id "eingabe". 
+                            -->
+                                <input type="radio" name="Handlung" value="a"/><!-- Dies ist der Radiobutton für die erste Möglichkeit -->
+                                <b>
+                                    <span class="weiterlesen" id="moeglichkeit1Intro"><!--Möglichkeit1 erste Zeile.--><br/></span>
+                                </b><br/>
+                                <span class="moeglichkeit" id="Moeglichkeit1"><!--Rest der Möglichkeitsbeschreibung für Möglichkeit 1--></span></p></div>
                      
-                       <div id="show2"><p><input type="radio" name="Handlung" value="b"/><b><span class="weiterlesen" id="moeglichkeit2Intro">Möglichkeit2<br/>
-                       </span></b><br/><span class="moeglichkeit" id="Moeglichkeit2">
-                        </span></p></div>
-                    
-                        <div id="show3"><p><input type="radio" name="Handlung" value="c"/><b><span class="weiterlesen" id="moeglichkeit3Intro">Möglichkeit3<br/>
-                        </span></b><br/><span class="moeglichkeit" id="Moeglichkeit3">
-                        </span></p></div>
+                       <div id="show2">
+                           <p>
+                                <input type="radio" name="Handlung" value="b"/><!-- Dies ist der Radiobutton für die zweite Möglichkeit -->
+                                <b>
+                                    <span class="weiterlesen" id="moeglichkeit2Intro"><!--Möglichkeit2 erste Zeile.--><br/></span>
+                                </b><br/>
+                                <span class="moeglichkeit" id="Moeglichkeit2"><!--Rest der Möglichkeitsbeschreibung für Möglichkeit 2--></span>
+                           </p>
+                       </div>                    
+                       <div id="show3">
+                           <p>
+                                <input type="radio" name="Handlung" value="c"/><!-- Dies ist der Radiobutton für die dritte Möglichkeit -->
+                                <b>
+                                    <span class="weiterlesen" id="moeglichkeit3Intro"><!--Möglichkeit3 erste Zeile.--><br/></span>
+                                </b><br/>
+                                <span class="moeglichkeit" id="Moeglichkeit3"><!--Rest der Möglichkeitsbeschreibung für Möglichkeit 3--></span>
+                           </p>
+                        </div>
+                        <div id="show4">
+                            <p>
+                                <input type="radio" name="Handlung" value="d"/><!-- Dies ist der Radiobutton für die vierte Möglichkeit -->
+                                <b>
+                                    <span class="weiterlesen" id="moeglichkeit4Intro"><!--Möglichkeit4 erste Zeile.--><br/></span>
+                                </b><br/>
+                                <span class="moeglichkeit" id="Moeglichkeit4"><!--Rest der Möglichkeitsbeschreibung für Möglichkeit 4--></span>
+                           </p>
+                        </div>
 
-                        <div id="show4"><p><input type="radio" name="Handlung" value="d"/><b><span class="weiterlesen" id="moeglichkeit4Intro">Möglichkeit4<br/>
-                        </span></b><br/><span class="moeglichkeit" id="Moeglichkeit4">
-                        </span></p></div>
-
-                <input type="button" name="1" value="Das ist meine Antwort!" onclick="ladeSzenario();"/>
+                <input type="button" name="1" value="Das ist meine Antwort!" onclick="ladeSzenario();"/><!-- Bei Betätigung des Buttons erfolgt eine Auswertung der Antwort durch die Funktion ladeSzenario. -->
         </form>
         </div>
     </div>
