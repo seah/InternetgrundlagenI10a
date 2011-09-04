@@ -156,7 +156,7 @@
               </li>
 
               <li id="Button4">
-                <a  href="../html/HIMYM_Show-Allgemein.htm">
+                <a  href="../html/HIMYM_Show.htm">
                   <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
                   <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Blub"/>
                   <span class="himym">
