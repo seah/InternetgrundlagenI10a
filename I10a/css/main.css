@@ -103,7 +103,7 @@ z-index: 1;
 right:20px;
 width:125px;
 height:46px;
-padding:auto;
+margin:auto;
 text-align: center;
 }
 
@@ -278,7 +278,7 @@ div#Quizbilder /*seka*/
 {z-index: 0; width: 650px; height: 270px;}
 
 div#Bild /*seka*/
-{z-index: 3; border-color:Orange; border-width:3; border-style:groove;}
+{z-index: 3; border-color:Orange; border-width:3px; border-style:groove;}
 
 div#Quiztext /*seka*/
 {top:225px; left:0px; width: 650px; height: 130px; z-index: 2; color:Orange; background-color:transparent;}
@@ -290,10 +290,10 @@ div#reset /*seka*/
 {top:50px; width: 650px; left:0px; height:50px;}
 
 div#welcome /*seka*/
-{top:50px; width: 650px; left:0px; height:50;}
+{top:50px; width: 650px; left:0px; height:50px;}
 
 div#eingabe /*seka*/
-{top:50px; width: 650px; left:0px; height:80;}
+{top:50px; width: 650px; left:0px; height:80px;}
 
 div#eingabe div p /*seka*/ 
 {margin-top:5px; margin-bottom:5px; background-color:black; font-size:0;}
@@ -320,11 +320,8 @@ Desweiteren wird hier das Aussehen von Links im Allgemeinen festgelegt. Links so
 damit sie im weiﬂen Text auffallen.
 */
 
-@font-face /*hepo*/
-{font-family: himym; src: url("../fonts/DaxCondensed.ttf");}
-
 div#leftnav ul li span /*hepo*/ 
-{position:absolute; left: 20px; top:12px; z-index:4; border:none; color:Black; font-family: himym,Sans-Serif,Times ; }
+{position:absolute; left: 20px; top:12px; z-index:4; border:none; color:Black; font-family: Sans-Serif,Times ; }
 
 .himym /*hepo*/ 
 {font-family:himym, Sans-Serif, Times; font-size:medium;} 
