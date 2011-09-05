@@ -250,16 +250,25 @@ Dieses Elternelement ist hier die Div-Box Text. So sind gleich positionierte Spr
 */
 
 .BarDiv a /*hepo*/
-{width: 100px; height: 100px; z-index: 4; float:left;  }
+{width: 100px; height: 100px;float:left; z-index: 4; border-width:3px; border-color:#6B1705; border-style:solid; }
 
 #Div1 a /*hepo*/
-{margin-top:50px; border-width:3px; border-color:#6B1705; border-style:solid;}
+{margin-top:50px;margin-left:0px;}
 
 #Div2 a /*hepo*/
-{margin-left:200px; border-width:3px; border-color:#6B1705; border-style:solid;}
+{margin-top:100px;margin-left:90px;}
 
 #Div3 a /*hepo*/
-{margin-left:300px; margin-top:50px; border-width:3px; border-color:#6B1705; border-style:solid;}
+{margin-top:50px;margin-left:140px;}
+
+#Div4 a /*hepo*/
+{margin-top:50px;margin-left:20px;}
+
+#Div5 a /*hepo*/
+{margin-top:50px;margin-right:300px;}
+
+#Div6 a /*hepo*/
+{margin-top:50px;margin-left:-95px;}
 
 div div.BarDiv a:hover /*hepo*/
 {background-image:url("../gfx/layout/HighlightButton3.png");}
