@@ -25,16 +25,16 @@
 /***********1.Einführung (technische Beschreibung der Quizfunktionalitäten)**********************************************************************************************************************************************************/
 
 /*Diese Javascript- Datei dient der Darstellung des Contents für das Quiz in der HIMYM_Quiz.htm (im Folgenden mit ".htm" abgekürzt). 
-Die Funktionsabfolgen, die bei sämtlichen Szenarien ausgeführt werden, sollen im Folgenden Schrittweise erläutert werden.
-Die genaue Beschreibung der einzelnen Funktionen bzw. Codefragmente wird direkt im Code dokumentiert.
+Die Funktionsabfolgen, die bei sämtlichen Szenarien ausgeführt werden, sollen im Folgenden schrittweise erläutert werden.
+Eine genauere Beschreibung der einzelnen Funktionen bzw. Codefragmente wird direkt im Code dokumentiert.
 
 Schritt 1: Vorbereitung auf den Quizstart bzw. Das Einblenden einer Willkommensmaske
 
-1.)Die "Quiz" -funktion dieser Datei wird bei dem laden des body Tags der htm zu ersten mal aktiv. 
-2.)Sie blendet ein dem Quizstand 0 entsprechendes Bild ein und prüft, ob  vom Spieler ein Name eingegeben wurde. 
+1.)Die "Quiz" -funktion dieser Datei wird bei dem Laden des body Tags der .htm zu ersten mal aktiv. 
+2.)Sie blendet ein dem Quizstand 0 entsprechendes Bild ein und prüft, ob vom Spieler ein Name eingegeben wurde. 
 3.)Da dies zunächst nicht der Fall ist, ruft diese die Funktion "zumAnfang" mit den Parametern (hidden, hidden) auf. 
 4.)Diese Eingabe führt zum Ausblenden der Divboxen (kurz:Divs) mit der ID "reset" und "eingabe", sowie zum Einblenden der Div mit der ID "welcome". 
-5.)Dies ist die Willkommensmaske (siehe .htm) mit dem Formular zur Namenseingabe.
+5.)Dies ist die Willkommensmaske (siehe div id="welcome") mit dem Formular zur Namenseingabe.
 
 Schritt 2: Das Einleiten eines Quizversuchs
 
@@ -79,7 +79,7 @@ Schritt 4: Auswertung einer Antwort
 3.)Der dritte Teil der ausgewählten Möglichkeit, in dem sich die Wertigkeit der Antwort befindet wird von "ladeSzenrio" aus dem Array mhandlung bezogen.
 4.)Als nächstes wird mit dem erhöhen der Variable "vstand" der Quizstand heraufgesetzt. 
 5.)Danach wird festgelegt, was basierend auf der gegebenen Antwort passieren soll. Die Wertigkeit der gegebenen Antwort wird einer case- Abfrage unterzogen.
-6.a.)Die Antwort entspricht in der Wertigkeit 0 oder 1. ->Das Quiz endet aufgrund der Auswahl einer "sehr schlechten" Antwort. 
+6.a.)Die Antwort entspricht in der Wertigkeit 0, 1 oder es gibt keine, weil der Nutzer nichts ausgewählt hat. ->Das Quiz endet aufgrund der Auswahl einer "sehr schlechten" Antwort. 
 6.a.1.)Die Anzahl der sehr schlechten Antworten wird erhöht.
 6.a.2.)Das Bild zu dem jeweiligen Fehlschlagszenario wird geladen und der entsprechende Text zur Niederlage in die div (id="Stage")geladen.
 6.a.3.)Die Funktion ZumAnfang wird ausgeführt, sodass die div (id="eingabe") versteckt und die div mit der id="reset" angezeigt wird. 
@@ -230,7 +230,7 @@ function ladeSzenario()
                 var vdastuich = document.getElementsByName("Handlung")[j].value; /* Der Wert des gecheckten Buttons wird bezogen.*/
             }
         }
-        switch (vdastuich)/* Durch diese case- Abfrage wird ermittelt, welche Wertigkeit der ausgewählten Möglichkeit entspricht.*/
+        switch (vdastuich)/* Durch diese case- Abfrage wird ermittelt, welche Wertigkeit der ausgewählten Möglichkeit entspricht.(siehe hierzu auch 3.2.Arrays: Handlungsstränge & Reaktionen, Das Array:"mhandlung") */
         {
         case "a":
             var vdaspassiert = mreaktion[vstand][2];
@@ -313,7 +313,7 @@ function ladeSzenario()
             Quiz();            
             break;
 
-        default:
+        default: /* Falls der Nutzer keine Antwort ausgewählt hat siehe auch 6.a.) */
             vantwortsehrschlecht = vantwortsehrschlecht + 1;
             schreibe("Na klaar... Nichts tun klappt immer!", "Stage");
             document.getElementById('Bild').src = '../gfx/Quiz/nada.gif';
