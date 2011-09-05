@@ -4,23 +4,15 @@
   <Titel>Episode1</Titel>
   <Beschreibung seiten="3">
     <Seite id="3" lastpage="true">
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      <Link name="Linkname">!!!!!!Dies ist die URL des Links</Link>
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      <Link name="Linkname">123214545</Link>
-      beim durchstöbern der Seite.
+      <h1>3. Frauen Flieger, Freiheit</h1>
+      Nachdem Robin Ted versichert hat, dass sie nur Freunde sind, 
+      lässt er sich widerwillig von seinem Freund Barney überreden, 
+      mit ihm zum Flughafen zu fahren, wo es von attraktiven Mädchen 
+      nur so wimmelt. Und ehe sich beide versehen, sitzen sie auch 
+      schon mit zwei davon in einem Flieger, der sie nach Philadelphia 
+      bringt. Während des Flugs müssen sie jedoch erfahren, dass die 
+      Frauen auf dem Weg zu ihren Freunden sind. Und dann hat es auch 
+      noch die Polizei auf die beiden abgesehen ...
     </Seite>
     <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
     <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>

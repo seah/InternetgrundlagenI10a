@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<Episode>
+  <Titel>Episode7</Titel>
+  <Beschreibung seiten="3">
+    <Seite id="3" lastpage="true">
+      <h1>9. Wohltaten und Untaten</h1>
+      Weil Ted an Thanksgiving nicht nach Hause fahren kann, beschließt er, an diesem Tag etwas Gutes zu tun. Robin hat auch nichts Besseres vor und schließt sich ihm an. In einem Obdachlosenheim, wo sie Essen austeilen wollen, treffen sie auf Barney, der zu ihrer Überraschung dort häufiger aushilft. Allerdings nicht freiwillig, sondern weil er von einem Richter zu Sozialstunden verdonnert wurde. Der Grund: Barney hat betrunken gegen eine Kirchenmauer gepinkelt ...
+    </Seite>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>
+  </Beschreibung>
+</Episode>

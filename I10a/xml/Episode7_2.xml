@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<Episode>
+  <Titel>Episode7</Titel>
+  <Beschreibung seiten="3">
+    <Seite id="2" lastpage="false">
+      <h1>8. Das Duell</h1>
+      Nachdem Lily schon länger nicht mehr in ihrem Apartment gewesen ist, muss sie, als sie dort wieder auftaucht, feststellen, dass ihre Wohnung in ein chinesisches Restaurant umgebaut wurde. Ted und Marshall bieten ihr an, dass sie bei ihnen einziehen kann. Mit der Zeit hat Ted jedoch den Eindruck, dass er in den eigenen vier Wänden unerwünscht ist. Nach einem Gespräch zwischen den Freunden soll der Ausgang eines Schwertkampfes darüber entscheiden, wer die Wohnung behalten darf ...
+    </Seite>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>
+  </Beschreibung>
+</Episode>

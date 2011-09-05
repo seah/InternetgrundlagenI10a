@@ -34,6 +34,8 @@
 	@bild: gibt an, welches Bild oben in der Kopfleiste
 	angezeigt wird. 
 	Innerhalb des Tags wird dann der Link angegeben.
+  @spantext: erzeugt den Text, der in der Sprech-
+  blase angezeigt wird
 	
 	Das Elemet Bild erzeugt Bilder in der neben-
 	stehenden Bildergalerie. Innerhalb des Tags
@@ -47,24 +49,15 @@
   <Titel>Episode1</Titel>
   <Beschreibung seiten="3">
     <Seite id="1" lastpage="false">
-      <h1>Willkommen</h1>
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      beim durchstöbern der Seite.
-      <Link name="Linkname" alt="Blub" bild="HighlightButton6">!!!!!!Dies ist die URL des Links</Link>
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-      <Link name="Linkname" alt="Blub2" bild="HighlightButton6">123214545</Link>
-      beim durchstöbern der Seite.
+      <h1>1. Verliebt, verlobt, versagt</h1>
+      Als Teds Freund Marshall seiner Freundin Lily einen Heiratsantrag macht, 
+      stellt der Architekturstudent fest, dass ihm etwas Wesentliches in seinem 
+      Leben fehlt: Er möchte sich auch endlich einmal so richtig verlieben und 
+      heiraten. Kurze Zeit später lernt er tatsächlich in einer Bar die 
+      Fernsehmoderatorin Robin kennen und ist sofort Feuer und Flamme für 
+      die Frau. Doch das erste Date verläuft für Ted absolut nicht so, wie 
+      er sich das eigentlich vorgestellt hätte ...
+<Link name='"Tante Robin"' alt="Tedsprechblase" bild="TedBubble" spantext="Sie ist eine tolle Frau!">123214545</Link> wieder sehen.
     </Seite>
     <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
     <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>

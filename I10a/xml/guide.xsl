@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<!--/XSLT-Erstellung seah/
+  <!--/XSLT-Erstellung seah/
     Im Folgenden wird die guide.xsl beschrieben.
     Die Dokumentation der HTML bestandteile befinden sich
     in der index.htm. Die Dokumentation der XML-Struktur,
@@ -19,59 +19,65 @@
     Das Bilder Template bindet Bilder, in die Bilderleiste ein.
     
     -->
-  <!-- Das Template, wie die Links und Bilder Tag´s in der XML verarbeitet werden, werden definiert.-->  
+  <!-- Das Template, wie die Links und Bilder Tag´s in der XML verarbeitet werden, werden definiert.-->
   <xsl:template match="Link" name="Links">
-        <xsl:variable name="episode" select="Episode"/>
-        <xsl:variable name="beschreibung" select="$episode/Beschreibung"/>
+    <xsl:variable name="episode" select="Episode"/>
+    <xsl:variable name="beschreibung" select="$episode/Beschreibung"/>
     <!-- Erzeugung eines HTML-Links aus einem <Link/>-Tag in der XML. -->
-        <a>
-            <xsl:attribute name="href">
-                <xsl:value-of select="." />
-            </xsl:attribute>
-			<xsl:value-of select="@name" />
-    <!-- Verschachtelung der Bilder in das Link-Tag um die Sprechblase und
+    <a>
+      <xsl:attribute name="href">
+        <xsl:value-of select="." />
+      </xsl:attribute>
+      <xsl:value-of select="@name" />
+      <!-- Verschachtelung der Bilder in das Link-Tag um die Sprechblase und
          das Charakterbild zu definieren-->
-			<img>
-			<xsl:attribute name="src">
-			../gfx/layout/Speechbubble.png
-			</xsl:attribute>
-			<xsl:attribute name="class">
-			Bubble
-			</xsl:attribute>
-			<xsl:attribute name="alt">
-				<xsl:value-of select="@alt" />
-			</xsl:attribute>
-			</img>
-			<img>
-			<xsl:attribute name="src">
-			../gfx/layout/<xsl:value-of select="@bild"/>.png
-			</xsl:attribute>
-			<xsl:attribute name="class">
-			SpeechBubbleHead
-			</xsl:attribute>
-			<xsl:attribute name="alt">
-				<xsl:value-of select="@alt"/>
-			</xsl:attribute>
-			</img>
-        </a>
-    </xsl:template>
-	<xsl:template match="h1" name="Titel">
-					<h1>
-		<xsl:value-of select="."/>
-		</h1>
-	</xsl:template>
+      <img>
+        <xsl:attribute name="src">
+          ../gfx/layout/Speechbubble.png
+        </xsl:attribute>
+        <xsl:attribute name="class">
+          Bubble
+        </xsl:attribute>
+        <xsl:attribute name="alt">
+          Eine Sprechblase
+        </xsl:attribute>
+      </img>
+      <img>
+        <xsl:attribute name="src">
+          ../gfx/layout/<xsl:value-of select="@bild"/>.png
+        </xsl:attribute>
+        <xsl:attribute name="class">
+          SpeechBubbleHead
+        </xsl:attribute>
+        <xsl:attribute name="alt">
+          <xsl:value-of select="@alt"/>
+        </xsl:attribute>
+      </img>
+      <span>
+        <xsl:attribute name="class">
+          himym
+        </xsl:attribute>
+        <xsl:value-of select="@spantext"/>
+      </span>
+    </a>
+  </xsl:template>
+  <xsl:template match="h1" name="Titel">
+    <h1>
+      <xsl:value-of select="."/>
+    </h1>
+  </xsl:template>
   <!-- Das Bilder Template, welches definierte <Bild/> Tags
        nach HTML umwandelt. -->
-    <xsl:template match="Bild" name="Bilder">
-        <img>
-            <xsl:attribute name="src">
-                <xsl:value-of select="."/>
-            </xsl:attribute>
-            <xsl:attribute name="alt">
-                <xsl:value-of select="@alt"/>
-            </xsl:attribute>
-        </img>
-    </xsl:template>
+  <xsl:template match="Bild" name="Bilder">
+    <img>
+      <xsl:attribute name="src">
+        <xsl:value-of select="."/>
+      </xsl:attribute>
+      <xsl:attribute name="alt">
+        <xsl:value-of select="@alt"/>
+      </xsl:attribute>
+    </img>
+  </xsl:template>
   <!--Die Seite wird ausgeführt-->
   <xsl:template match="/">
     <!-- Speichert den Pfad der Episode -->
@@ -84,7 +90,7 @@
     <xsl:variable name="seite" select="$beschreibung/Seite"/>
     <xsl:variable name="seitenr" select="$seite/@id"/>
     <xsl:variable name="lastPage" select="$seite/@lastpage"/>
-    
+
     <!-- Ausgabe der HTML -->
     <html>
       <head>
@@ -101,19 +107,19 @@
 
               <li id="Link1">
                 <span class="himym">
-                  <a href="Episode1_1.xml">Episode 1</a>
+                  <a href="Episode1_1.xml">Episode 1 - 3</a>
                 </span>
               </li>
 
               <li id="Link2">
                 <span class="himym">
-                  <a href="Episode2_1.xml">Episode 2</a>
+                  <a href="Episode4_1.xml">Episode 4 - 6</a>
                 </span>
               </li>
 
               <li id="Link3">
                 <span class="himym">
-                  <a href="Episode3_1.xml">Episode 3</a>
+                  <a href="Episode7_1.xml">Episode 7 - 9</a>
                 </span>
               </li>
 
@@ -185,15 +191,15 @@
 
           <div id="Content">
             <div id="Text">
-                <div class="himym">
-                  <!-- Dieses Skript lädt die aktuelle Seite mit Titel, Beschreibungen und Links -->
-                  <xsl:apply-templates select="$seite" />
-                </div>
+              <div class="himym">
+                <!-- Dieses Skript lädt die aktuelle Seite mit Titel, Beschreibungen und Links -->
+                <xsl:apply-templates select="$seite" />
+              </div>
 
               <!-- In der Navigation wird geprüft, ob die aktuelle Seite die letzte Seite ist,
                    dann wird weiter ausgeblendet, ist die Seite die erste Seite, dann wird zurück
                    ausgeblendet -->
-              
+
               <div id="bottomnav">
                 <xsl:if test="$seite/@id != '1'">
                   <div class="navbtn">
@@ -215,12 +221,12 @@
                     </xsl:element>
                   </div>
                 </xsl:if>
-                
+
                 <!-- Die folgende Funktion stellt den Index der Seite dar. -->
                 <div id="index">
                   <xsl:value-of select="$seitenr"/>/<xsl:value-of select="$beschreibung/@seiten"/>
                 </div>
-                
+
               </div>
 
             </div>
@@ -230,7 +236,7 @@
             <div id="Bilder">
               <xsl:apply-templates select="$beschreibung/Bild"/>
             </div>
-            
+
           </div>
         </div>
       </body>

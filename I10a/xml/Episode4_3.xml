@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<Episode>
+  <Titel>Episode4</Titel>
+  <Beschreibung seiten="3">
+    <Seite id="3" lastpage="true">
+      <h1>6. Die Kürbis-Schlampe</h1>
+      Eine Halloween-Party auf dem Dach seines Wohnhauses steht bevor, und auch dieses Jahr lässt sich Ted das Ereignis nicht entgehen. Doch eigentlich hofft er, ein Mädchen, das er vor vier Jahren dort getroffen hat, endlich wiederzusehen. Barney findet die Idee völlig dämlich und versucht, seinen Freund zu einer Party bei Victoria's Secret zu überreden. Ted gibt die Hoffnung nicht auf, doch dann taucht spät abends eine ganz andere Frau auf dem Dach auf und gesellt sich zu ihm ...
+    </Seite>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>
+  </Beschreibung>
+</Episode>

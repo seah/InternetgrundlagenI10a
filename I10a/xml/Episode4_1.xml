@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<Episode>
+  <Titel>Episode4</Titel>
+  <Beschreibung seiten="3">
+    <Seite id="1" lastpage="false">
+      <h1>4. Gutes altes Hemd</h1>
+      Ted ist gerade dabei, mit seinen Freunden seine vergangenen Bekanntschaften durchzugehen, um dadurch vielleicht seine zukünftige Frau und Mutter seiner Kinder zu finden. Seine Wahl fällt auf Natalie, von der er sich jedoch damals mittels einer Nachricht auf dem Anrufbeantworter getrennt hat. Ted gelingt es, Natalies Herz erneut zu erobern, er teilt ihr aber wenig später mit, dass sie doch nicht die Richtige ist. Diesmal lässt sie das jedoch nicht ohne Weiteres auf sich sitzen ...
+    </Seite>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>
+  </Beschreibung>
+</Episode>

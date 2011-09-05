@@ -4,14 +4,14 @@
   <Titel>Episode1</Titel>
   <Beschreibung seiten="3">
     <Seite id="2" lastpage="false">
-	<h1>So das war´s erstmal zur Beschreibung.</h1>
-Die ist die erste Episode von How i met your mother.
-      <Link name="Linkname">!!!!!!Dies ist die URL des Links</Link>
-      Herzlich Willkommen im Episodenguide. Sie haben die Möglichkeit ein
-      paar Informationen von "How I met your mother" einzusehen. Viel Spaß
-	  <h1>TuffTuff</h1>
-            <Link name="Linkname" alt="Blub" bild="HighlightButton6">!!!!!!Dies ist die URL des Links</Link>
-      beim durchstöbern der Seite.
+	<h1>2. Die lila Giraffe</h1>
+      Ted kann Robin nicht vergessen und ist fest davon überzeugt, 
+      dass sie seine zukünftige Frau sein könnte. Allerdings muss 
+      er dann von Lily erfahren, dass Robin an keiner festen Beziehung 
+      interessiert ist. Ted versucht daraufhin alles, sich nach außen 
+      hin locker zu zeigen. Insgeheim entwickelt er jedoch einen Plan, 
+      um zu einem zweiten Date mit Robin zu kommen. Er lädt sie ganz 
+      zufällig zu einer Party bei sich ein, die jedoch erst noch organisiert werden muss ...
     </Seite>
     <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
     <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>

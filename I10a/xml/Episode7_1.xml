@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<Episode>
+  <Titel>Episode7</Titel>
+  <Beschreibung seiten="3">
+    <Seite id="1" lastpage="false">
+      <h1>7. Kakerlage liebt Maus</h1>
+      Barney gelingt es, Ted zu überreden, gemeinsam eine Partnervermittlung aufzusuchen. Während Ted dabei hofft, die Frau seines Lebens zu finden, will Barney nur einige erotische Abenteuer erleben. Allerdings hat die Partnervermittlerin Ellen ihre Liebe Not, eine geeignete Frau für Ted zu finden. Einzig Sarah käme in Frage, sie wurde jedoch bereits erfolgreich 'vermittelt'. Ted lässt dennoch nichts unversucht. Schließlich findet er sie und macht ihr einen eindeutigen Vorschlag ...
+    </Seite>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>
+  </Beschreibung>
+</Episode>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="guide.xsl"?>
+<Episode>
+  <Titel>Episode4</Titel>
+  <Beschreibung seiten="3">
+    <Seite id="2" lastpage="false">
+      <h1>5. Von Tänzern und Tauben</h1>
+      Ted und Barney gehen gemeinsam mit Robin in eine Promi-Disco, um endlich wieder einmal einen aufregenden Abend zu erleben. Weil Robin den Besitzer des Clubs kennt, kommen sie problemlos in die Disco. Drinnen läuft jedoch nicht alles zu ihrer Zufriedenheit: Ted ist von dem großen Andrang völlig genervt, Barney baggert versehentlich seine Cousine an, und Robin scheitert auf erbärmliche Weise am Türsteher, als sie in den VIP-Bereich vordringen will
+    </Seite>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid1_klein.png</Bild>
+    <Bild alt="kleiner Polaroidrahmen">../gfx/layout/Polaroid2_klein.png</Bild>
+  </Beschreibung>
+</Episode>
