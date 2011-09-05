@@ -25,7 +25,7 @@
 body,html /*seah*/
 {background-color:#000000;}
 
-div#Layout /*hepo*/
+div#Layout, div#BarLayout /*hepo*/
 {
 position:relative; /*seah*/
 width: 850px;
@@ -34,6 +34,9 @@ margin: auto;
 z-index: 0; /*seah*/
 background-image: url("../gfx/layout/Background.png");
 }
+
+div#BarLayout
+{background-image: url("../gfx/layout/BackgroundBar.png");}
 
 /***********2.Header***********************************************************************************************************************************************************/
 
@@ -253,16 +256,16 @@ Dieses Elternelement ist hier die Div-Box Text. So sind gleich positionierte Spr
 {width: 100px; height: 100px;float:left; z-index: 4; border-width:3px; border-color:#6B1705; border-style:solid; }
 
 #Div1 a /*hepo*/
-{margin-top:50px;margin-left:0px;}
+{margin-top:0px;margin-left:0px;}
 
 #Div2 a /*hepo*/
 {margin-top:100px;margin-left:90px;}
 
 #Div3 a /*hepo*/
-{margin-top:50px;margin-left:140px;}
+{margin-top:20px;margin-left:140px;}
 
 #Div4 a /*hepo*/
-{margin-top:50px;margin-left:20px;}
+{margin-top:50px;margin-left:10px;}
 
 #Div5 a /*hepo*/
 {margin-top:50px;margin-right:300px;}
@@ -271,14 +274,57 @@ Dieses Elternelement ist hier die Div-Box Text. So sind gleich positionierte Spr
 {margin-top:50px;margin-left:-95px;}
 
 div div.BarDiv a:hover /*hepo*/
-{background-image:url("../gfx/layout/HighlightButton3.png");}
+{background-image:url("../gfx/layout/BarHover.png");}
 
 div#Barcontent /*hepo*/
-{position:absolute; top:170px; left:165px; width: 700px; height: 430px; z-index: 1; background-image:url("../gfx/layout/BackgroundBar.jpg"); background-repeat:no-repeat; }
+{position:absolute; top:170px; left:165px; width: 700px; height: 430px; z-index: 1;background-repeat:no-repeat; }
 
 /***********6.Das Quiz*********************************************************************************************************************************************************/
 
-/* ???????????????????????????????
+/* Es folgen Styledefinitionen die speziell für das Quiz angelegt wurden. 
+Die Elemente mit den folgenden IDs mussten positioniert werden, weil sie eigens für das Quiz angelegt wurden:
+Quizbilder,Bild, Quiztext, Stage, reset, welcome, eingabe
+Diese wurden in der Inhalts- div (id="Content"), die alle Seiten gemein haben, platziert.
+Aufbau:
+
+Die Div mit der id "Quizbilder" ist in der Inhalts- div (id="Content") ganz oben angeordnet. Wichtig:
+    -Der Text für die Situationsbeschreibung des Quiz (id="Stage")ist im unteren linken Rand der div platziert.
+    -Das Quizbild (id="Bild") füllt die umschließende div (id="Quizbilder") aus.
+
+Die Div mit der id "Quiztext" ist unterhalb der div mit der Id "Quizbilder" in der Inhalts- div platziert. Wichtig:
+
+    -Die Divs mit den id "reset", "welcome" und "eingabe" n der div enthalten. 
+    -Sie füllen jedes für sich den in der div enthaltenen Raum ganz aus, verursachen jedoch keine Positionierungskonflikte, weil immer nur eine von ihnen sichtbar ist.
+
+Anzeigen der Beschreibung der Möglichkeiten durch hover.   
+
+Problem:
+
+War das div mit der Id "eingabe" eingeblendet, 
+so gab es bei mehreren dargestellten Möglickeiten, die alle über mehrere Zeilen gehen, Positionierungsprobleme.
+Der text war im Verhältnis zur Höhe der Divbox lang.
+
+Die Lösung: 
+
+Die Beschreiung jeder Antwortmöglichkeit wird in zwei Teile zerlegt, in ein Intro und eine Beschreibung.
+Der Introteil jeder Möglichkeit eines Quizszenarios ist immer sichtbar, um dem Nutzer zu suggerieren das Anworten verfügbar sind und, um den Inhalt der Antwortmöglichkeit an zu deuten.
+Der Beschreibungsteil einer Antwortmöglichkeit wird nur bei dem Bewegen der Maus über seinen Introteil sichtbar. 
+Es gibt somit immer nur eine vollständig sichtbare Antwortmöglichkeit.
+
+
+Die Realisierung in html, css und javascript
+
+Jede Möglichkeitsbeschreibung wird bereits in dem Array, aus dem sie bezogen wird, in die Teile Intro und Beschreibung zerlegt.
+Intro und Beschribungsteil werden in unterschiedliche span- Elemente neben den Radiobutton geschrieben, der zur Möglichkeit gehört.
+Die "span"- Elemente werden innerhalb eines Absatzes platziert. 
+Dieser Absatz erhält die Schriftgröße 0 und die Eigenschaft bei hover die Schriftgröße medium zu bekommen.
+Zwischen den "span" -Elementen wird ein "br" -Element platziert. 
+Mit der Anwendung der Pseudoklasse "first-line" wird nur die erste Zeile des Absatzes angesprochen.
+Diese Zeile hat als Schriftgröße "medium" und ist somit der einzige sichtbare Teil des Absatzes.
+Bei hover über die erste Zeile (bzw. das erste "span"-Element) wird der ganze Absatz sichtbar.
+
+
+
 */
 
 div#Quizbilder,div#Bild,div#Quiztext,#Stage,div#reset,div#welcome,div#eingabe /*seka*/
@@ -291,10 +337,10 @@ div#Bild /*seka*/
 {z-index: 3; border-color:Orange; border-width:3px; border-style:groove;}
 
 div#Quiztext /*seka*/
-{top:225px; left:0px; width: 650px; height: 130px; z-index: 2; color:Orange; background-color:transparent;}
+{top:225px; left:0px; width: 650px; height: 130px; z-index: 2; background-color:transparent;}
 
 #Stage /*seka*/
-{width: 500px; left: 0px; bottom:15px; z-index: 4; color:orange;}
+{width: 500px; left: 0px; bottom:15px; z-index: 4; color:orange;background-color:#6b1705;font-size:medium;}
 
 div#reset /*seka*/
 {top:50px; width: 650px; left:0px; height:50px;}
@@ -312,7 +358,7 @@ div#eingabe div p:first-line /*seka*/
 {color:Orange;font-size:medium;}
 
 div#eingabe div p:hover /*seka*/
-{font-size:medium;}    
+{font-size:medium;}     
 
 /***********7.Typographie******************************************************************************************************************************************************/
 
@@ -330,24 +376,20 @@ Desweiteren wird hier das Aussehen von Links im Allgemeinen festgelegt. Links so
 damit sie im weißen Text auffallen.
 */
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 0b070c1bf0e13a85349101aef687764e3746ec72
 div#leftnav ul li span /*hepo*/ 
 {position:absolute; left: 20px; top:12px; z-index:4; border:none; color:Black; font-family: Sans-Serif,Times ; }
 
 .himym /*hepo*/ 
-{font-family:Sans-Serif, Times; font-size:medium;} 
-
-.smallfont /*hepo*/
-{font-size:small; font-family:himym, Sans-Serif, Times New Roman;}
+{font-family:himym, Sans-Serif, Times; font-size:medium;} 
  
- div#Text a, div#Medientext a /*hepo*/ 
+ div#Text a,div#Medientext a /*hepo*/ 
  {color: #f7911e; font-size:large; text-decoration:none; font-weight:bold;}
  
  div#Text a:hover, div#Medientext a:hover /*hepo*/ 
  {color: #f76e4a;}
+ 
+ .Headline
+ {font-family:himym, Sans-Serif, Times; font-size:large; font-weight:bold;} 
 
 /***********8.Sprechblasen*****************************************************************************************************************************************************/
 

@@ -258,7 +258,7 @@ function ladeSzenario()
 
     switch (vdaspassiert) /* Durch diese case- Abfrage wird festgelegt, welche Konsequenz die Antwort hat*/
         {
-        case 0:
+            case 0: /* siehe Einleitung Schritt 4 Punkt 6.a.)- 6.b.)*/
             vantwortsehrschlecht = 1;
             schreibe("Alter! Es gibt nur zwei wichtige Regeln, wenn du versuchst eine Frau auf subtile weise flach zu legen. Du darfst ihr nie die Wahrheit über deine Identität und/oder die Identität deines Copiloten offenbaren, ist die erste. Du darfst ihr deine Intention und/oder die Intention deines Copiloten nicht offenbaren, ehe sie im Netz deines bzw. seines Charms gefangen ist, ist die zweite. Siehst du was passiert, wenn du meinen Blog nicht liest?", "Stage");
             document.getElementById('Bild').src = '../gfx/Quiz/loss2.jpg';
@@ -267,7 +267,7 @@ function ladeSzenario()
             
                 break;
 
-        case 1:
+            case 1: /* siehe Einleitung Schritt 4 Punkt 6.a.)-6.b.)*/
             vantwortsehrschlecht = 1;
             schreibe('Barney sagt: "Danke fürs mitspielen Bro,  so stelle ich mir einen Copiloten vor! Die hier kommt mit mir, aber die nächste gehört dir! Versprochen!"', "Stage")
             document.getElementById('Bild').src = '../gfx/Quiz/loss1.jpg';
@@ -276,7 +276,7 @@ function ladeSzenario()
             
             break;
 
-        case 2:
+        case 2: /* siehe Einleitung Schritt 4 Punkt Punkt 6.b.)-6.c.)*/
             vantwortok = vantwortok + 1;
             if (vstand >= 3) 
             {
@@ -291,7 +291,7 @@ function ladeSzenario()
             
             break;
 
-        case 3:
+        case 3: /* siehe Einleitung Schritt 4 Punkt 6.c.)-6.d.)*/
             vstand = vstand + 1;
             vantwortgut = vantwortgut + 1;
             if (vstand >= 3) 
@@ -307,7 +307,7 @@ function ladeSzenario()
             
             break;
 
-        case 4:
+        case 4: /* siehe Einleitung Schritt 4 Punkt 6.d.) fortlaufend */
             vstand = vstand - 2;
             vantwortschlecht = vantwortschlecht + 1;
             Quiz();            
