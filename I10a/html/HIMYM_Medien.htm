@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+﻿<!--  Zuständigkeit für die HTML-Dateien   -->
+<!--  ----------------------------------   -->
+<!--  Die HTML-Dateien folgen einem gemeinsamen Layout, das auch in der XSLT verwendet wird.   -->
+<!--  Die HTML-Dateien wurden von Henrik Porath erstellt und von Sebastian Ahlen und Henrik Porath   -->
+<!--  im Rahmen von CSS-Anpassungen und Qualitätssicherung weiter verändert.   -->
+<!--  In den Dateien "HIMYM_Quiz.htm" sowie "HIMYM_Bar.htm" wurden Änderungen von Sergej Kasper vorgenommen,   -->
+<!--  die relevant für Content-Erstellung und Einbindung des Quiz-Javascripts waren.   -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <!-- seah -->
 <html xmlns="http://www.w3.org/1999/xhtml" > <!-- hepo -->
 <head>
@@ -9,7 +17,11 @@
 </head>
 <body>
 
-<div id="Layout"> <!-- seah: Neustukturierung der Seite. Elemente sind nun geschachtelt und mittig zentriert. -->
+<div id="Layout"> <!-- seah -->
+
+<!--  "leftnav" ist die linke Navigationsleiste, die eine tiefergehende Navigation innerhalb der   -->
+<!--  Oberkategorien ermöglicht. Die Links verwenden immer dieselben Bilder, während die   -->
+<!--  Beschriftung hier in der HTML-Datei festgelegt wird.   -->
 
   <div id="leftnav"> <!-- seah -->
         <ul>
@@ -27,13 +39,24 @@
     </ul>
   </div>
 
+<!--  Auf jeder Seite ist zum Impressum verlinkt (außer dem Impressum selbst), in dem sich Kontaktdaten und Quellenangaben befinden.  -->
+
  <div id="Impressum"> <!-- hepo -->
         <a href="HIMYM_Impressum.htm"></a>
     </div>
 
+<!--  "topnav" beinhaltet Links zu den Oberkategorien der Seite:   -->
+<!--  News, die Bar, das Quiz, Infos über die Show und die Mediensammlung.  -->
+<!--  Die "Buttons", wie die einzelnen Links hier bezeichnet werden, sind mittels eines Hover-Effekts   -->
+<!--  (näheres dazu in der CSS) animiert, um ansprechender zu wirken und die Themengebiete passend -->
+<!--  zu visualisieren.   -->
+<!--  Wie "leftnav" sind auch die Buttons in einer Liste aufgeführt, in der sie relativ positioniert sind. -->
+<!--  Alle Buttons verwenden pur in CSS definierte Sprechblasen und beinhalten entsprechende Bilder und Texte. -->
+<!--  Zu diesen Bildern zählen die Gesichter der Charaktere, die Themen mit den Charakteren assoziieren sollen. -->
+
     <div id="topnav"> <!-- seah -->
         <ul>
-            <li id="Button1">
+            <li id="Button1"><!-- hepo -->
                 <a href="../index.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/RobinBubble.png" alt="Robin Profil"/>
@@ -41,7 +64,7 @@
                 </a>
             </li>
   
-            <li id="Button2">
+            <li id="Button2"><!-- hepo -->
                 <a href="HIMYM_Bar.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Marshall Profil"/>
@@ -50,7 +73,7 @@
                 </a>
             </li>
   
-            <li id="Button3">
+            <li id="Button3"><!-- hepo -->
                 <a href="HIMYM_Quiz.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/BarneyBubble.png" alt="Barney Profil"/>
@@ -59,7 +82,7 @@
                 </a>
             </li>
   
-            <li id="Button4">
+            <li id="Button4"><!-- hepo -->
                 <a  href="HIMYM_Show.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/TedBubble.png" alt="Ted Profil"/>
@@ -68,7 +91,7 @@
                 </a>
             </li>
   
-            <li id="Button5">
+            <li id="Button5"><!-- hepo -->
                 <a href="HIMYM_Medien.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Lily Profil"/>
@@ -79,28 +102,39 @@
       </ul>
   </div>
 
-  <div id="Button6"></div>
+<!--  Der sechste "Button" ist kein Button im eigentlichen Sinne. -->
+<!--  Er ist eigentlich Bestandteil des Layouts und ist dazu bestimmt, von Sprechblasen und den dazugehörigen Gesichtern -->
+<!--  überlagert zu werden. Darum besitzt er keinen Inhalt und verfügt in der CSS über einen z-Index von 0. -->
+
+  <div id="Button6"></div><!-- hepo -->
+
+<!--  In der Content-Div-Box befinden sich sämtliche Inhalte der einzelnen Seiten. -->
+<!--  Bis auf die verschieden beschrifteten Links in "leftnav" ist dies der einzige Bereich, in dem -->
+<!--  sich die einzelnen Seiten unterscheiden. -->
 
   <div id="Content"> <!-- hepo -->
 
+<!--  Text liegt im linken Bereich der Content-Box und beinhaltet, naheliegend, hauptsächlich Schrift. -->
+<!--  Diverse Schriftformatierungen werden hierauf angewandt. Zudem gibt es die Möglichkeit, -->
+<!--  mit Sprechblasen versehene Begriffe einzufügen. -->
+
       <div id="Text" class="himym">
-        Dies ist die 
+        <h1>Mediensammlung</h1>
+        <p>Hier findet der begeisterte How I Met Your Mother-Fan<br />
+        alle
         <a href="../index.html">
-        Startseite
+        Bilder,
         <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
-        <img class="SpeechBubbleHead" src="../gfx/layout/TedBubble.png" alt="Blub"/>
-        <span class="himym">Eine Startseite.</span>
-        </a>, <br/>
-        ein bloßer Platzhalter, <br/>
-        nicht viel mehr.
-        <a href="../index.html">
-        Startseite
-        <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Blub"/>
-        <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Blub"/>
-        <span class="himym">Zweiter Link.</span>
+        <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Blub"/>
+        <span class="himym">Hier findest du alle Bilder wieder,<br/>die es auf der Seite gibt!</span>
         </a>
+         Videos und Links rund um seine Lieblingssendung!<br />
+        </p>
     </div>
     
+<!--  In der Bilder-Div-Box werden, gleich einem Fotoalbum, verschiedene zum Text passende Bilder gesammelt. -->
+<!--  Alle Bilder werden in der Mediengalerie noch einmal aufgeführt, wo sie bis auf eine Größenanpassung unbearbeitet vorliegen. -->
+
     <div id="Bilder">
 
     </div>

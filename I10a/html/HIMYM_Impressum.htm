@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+﻿<!--  Zuständigkeit für die HTML-Dateien   -->
+<!--  ----------------------------------   -->
+<!--  Die HTML-Dateien folgen einem gemeinsamen Layout, das auch in der XSLT verwendet wird.   -->
+<!--  Die HTML-Dateien wurden von Henrik Porath erstellt und von Sebastian Ahlen und Henrik Porath   -->
+<!--  im Rahmen von CSS-Anpassungen und Qualitätssicherung weiter verändert.   -->
+<!--  In den Dateien "HIMYM_Quiz.htm" sowie "HIMYM_Bar.htm" wurden Änderungen von Sergej Kasper vorgenommen,   -->
+<!--  die relevant für Content-Erstellung und Einbindung des Quiz-Javascripts waren.   -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <!-- seah -->
 <html xmlns="http://www.w3.org/1999/xhtml" > <!-- hepo -->
 <head>
@@ -9,17 +17,29 @@
 </head>
 <body>
 
-<div id="Layout"> <!-- seah: Neustukturierung der Seite. Elemente sind nun geschachtelt und mittig zentriert. -->
+<div id="Layout"> <!-- seah -->
 
+<!--  "leftnav" ist die linke Navigationsleiste, die eine tiefergehende Navigation innerhalb der   -->
+<!--  Oberkategorien ermöglicht. Die Links verwenden immer dieselben Bilder, während die   -->
+<!--  Beschriftung hier in der HTML-Datei festgelegt wird.   -->
 
   <div id="leftnav"> <!-- seah -->
         <ul>
     </ul>
   </div>
 
+<!--  "topnav" beinhaltet Links zu den Oberkategorien der Seite:   -->
+<!--  News, die Bar, das Quiz, Infos über die Show und die Mediensammlung.  -->
+<!--  Die "Buttons", wie die einzelnen Links hier bezeichnet werden, sind mittels eines Hover-Effekts   -->
+<!--  (näheres dazu in der CSS) animiert, um ansprechender zu wirken und die Themengebiete passend -->
+<!--  zu visualisieren.   -->
+<!--  Wie "leftnav" sind auch die Buttons in einer Liste aufgeführt, in der sie relativ positioniert sind. -->
+<!--  Alle Buttons verwenden pur in CSS definierte Sprechblasen und beinhalten entsprechende Bilder und Texte. -->
+<!--  Zu diesen Bildern zählen die Gesichter der Charaktere, die Themen mit den Charakteren assoziieren sollen. -->
+
     <div id="topnav"> <!-- seah -->
          <ul>
-            <li id="Button1">
+            <li id="Button1"><!-- hepo -->
                 <a href="../index.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/RobinBubble.png" alt="Robin Profil"/>
@@ -27,7 +47,7 @@
                 </a>
             </li>
   
-            <li id="Button2">
+            <li id="Button2"><!-- hepo -->
                 <a href="HIMYM_Bar.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Marshall Profil"/>
@@ -36,7 +56,7 @@
                 </a>
             </li>
   
-            <li id="Button3">
+            <li id="Button3"><!-- hepo -->
                 <a href="HIMYM_Quiz.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/BarneyBubble.png" alt="Barney Profil"/>
@@ -45,7 +65,7 @@
                 </a>
             </li>
   
-            <li id="Button4">
+            <li id="Button4"><!-- hepo -->
                 <a  href="HIMYM_Show.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/TedBubble.png" alt="Ted Profil"/>
@@ -54,7 +74,7 @@
                 </a>
             </li>
   
-            <li id="Button5">
+            <li id="Button5"><!-- hepo -->
                 <a href="HIMYM_Medien.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Lily Profil"/>
@@ -65,35 +85,52 @@
       </ul>
   </div>
 
-  <div id="Button6"></div>
+
+<!--  Der sechste "Button" ist kein Button im eigentlichen Sinne. -->
+<!--  Er ist eigentlich Bestandteil des Layouts und ist dazu bestimmt, von Sprechblasen und den dazugehörigen Gesichtern -->
+<!--  überlagert zu werden. Darum besitzt er keinen Inhalt und verfügt in der CSS über einen z-Index von 0. -->
+
+  <div id="Button6"></div><!-- hepo -->
+
+  <!--  In der Content-Div-Box befinden sich sämtliche Inhalte der einzelnen Seiten. -->
+  <!--  Bis auf die verschieden beschrifteten Links in "leftnav" ist dies der einzige Bereich, in dem -->
+  <!--  sich die einzelnen Seiten unterscheiden. -->
 
   <div id="Content"> <!-- hepo -->
 
-      <div id="Medientext" class="himym">
+  <!--  Medientext liegt in der Content-Box und beinhaltet, naheliegend, hauptsächlich Schrift. -->
+  <!--  Diverse Schriftformatierungen werden hierauf angewandt.  -->
+  <!--  Hier wird nicht die Div-Box "Text" verwendet, da "Medientext" sein muss.  -->
+
+      <div id="Medientext" class="himym"><!-- hepo -->
         <h1>Impressum</h1>
         <p><h2>Verantwortliche dieser Seite:</h2>
         Sergej Kasper       <br /><span class="smallfont">sergej.kasper@nordakademie.de</span><br />
         Sebastian Ahlen       <br /><span class="smallfont">sebastian.ahlen@nordakademie.de</span><br />
         Henrik Porath       <br /><span class="smallfont">henrik.porath@nordakademie.de</span></p>
-        <p><h2>Bilderquellen:</h2>
-        <p class="smallfont">http://photos.erdbeerlounge.de/images/articlegallery/1/9/4/19421/AICS/os/400/800/19421.jpg <br />
-http://www.fansshare.com/media/u/images/how-i-met-your-mother-season-7-premier-poster1.jpg <br />
-http://www.daemonstv.com/2010/02/07/how-i-met-your-mother-rabbit-or-duck-season-5-episode-15/ <br />
-http://twitter.com/#!/HIMYMBlog/status/50631842298200064 <br />
-http://www.hotcelebshome.com/2011/01/29/katy-perry-on-how-i-met-your-mother-set/katy-perry-3-32/ <br />
-http://sitcomfreaks.wordpress.com/tag/how-i-met-your-mother-2/ <br />
-http://www.myconfinedspace.com/2009/01/27/how-i-met-your-mother-cast-2/how-i-met-your-mother-cast/  <br />
-http://www.wehype.com/fileadmin/user_upload/hypes/images/823_images_1.jpg <br />
-http://www.electru.de/wp-content/uploads/brocode.jpg <br />
-http://www.filmscenter.com/wp-content/uploads/pictures/how-i-met-your-mother-poster-157.jpg <br />
-http://blog.nj.com/entertainment_impact_tv/2009/05/large_himym-right-place.jpg <br />
-http://himymwiki.wikispaces.com/file/view/robin_scherbatsky.jpg/189937006/robin_scherbatsky.jpg <br />
-http://images.wikia.com/how-i-met-your-mother/de/images/9/91/Large_himym-mosbius-designs-2.jpg <br />
-http://www.e4.com/media/331D2260-8F94-404B-A4BD-EFDBC5EDA1D6_extra.jpg <br />
-http://images.wikia.com/how-i-met-your-mother/de/images/0/01/How_lily_stole_christmas.jpg <br />
-http://images2.fanpop.com/images/photos/2900000/Marshall-how-i-met-your-mother-2960633-1280-1024.jpg <br />
-http://2.bp.blogspot.com/_gyOeNaG3O3U/TF34LJgSuqI/AAAAAAAAAOE/UMD4pExs4iM/s1600/marshall+erikson.jpg
-</p>
+        <p>
+            <span class="Headline">Bilderquellen:</span>
+            <p class="smallfont">
+                http://photos.erdbeerlounge.de/images/articlegallery/1/9/4/19421/AICS/os/400/800/19421.jpg <br />
+                http://www.fansshare.com/media/u/images/how-i-met-your-mother-season-7-premier-poster1.jpg <br />
+                http://www.daemonstv.com/2010/02/07/how-i-met-your-mother-rabbit-or-duck-season-5-episode-15/ <br />
+                http://twitter.com/#!/HIMYMBlog/status/50631842298200064 <br />
+                http://www.hotcelebshome.com/2011/01/29/katy-perry-on-how-i-met-your-mother-set/katy-perry-3-32/ <br />
+                http://sitcomfreaks.wordpress.com/tag/how-i-met-your-mother-2/ <br />
+                http://www.myconfinedspace.com/2009/01/27/how-i-met-your-mother-cast-2/how-i-met-your-mother-cast/  <br />
+                http://www.wehype.com/fileadmin/user_upload/hypes/images/823_images_1.jpg <br />
+                http://www.electru.de/wp-content/uploads/brocode.jpg <br />
+                http://www.filmscenter.com/wp-content/uploads/pictures/how-i-met-your-mother-poster-157.jpg <br />
+                http://blog.nj.com/entertainment_impact_tv/2009/05/large_himym-right-place.jpg <br />
+                http://himymwiki.wikispaces.com/file/view/robin_scherbatsky.jpg/189937006/robin_scherbatsky.jpg <br />
+                http://images.wikia.com/how-i-met-your-mother/de/images/9/91/Large_himym-mosbius-designs-2.jpg <br />
+                http://www.e4.com/media/331D2260-8F94-404B-A4BD-EFDBC5EDA1D6_extra.jpg <br />
+                http://images.wikia.com/how-i-met-your-mother/de/images/0/01/How_lily_stole_christmas.jpg <br />
+                http://images2.fanpop.com/images/photos/2900000/Marshall-how-i-met-your-mother-2960633-1280-1024.jpg <br />
+                http://2.bp.blogspot.com/_gyOeNaG3O3U/TF34LJgSuqI/AAAAAAAAAOE/UMD4pExs4iM/s1600/marshall+erikson.jpg <br />
+                http://imageshack.us/photo/my-images/41/howimetyourmothercastho.jpg/ <br />
+                http://www.have-you-met-ted.com/wp-content/uploads/season2.jpg
+            </p>
         </p>
     </div>
   </div>

@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+﻿<!--  Zuständigkeit für die HTML-Dateien   -->
+<!--  ----------------------------------   -->
+<!--  Die HTML-Dateien folgen einem gemeinsamen Layout, das auch in der XSLT verwendet wird.   -->
+<!--  Die HTML-Dateien wurden von Henrik Porath erstellt und von Sebastian Ahlen und Henrik Porath   -->
+<!--  im Rahmen von CSS-Anpassungen und Qualitätssicherung weiter verändert.   -->
+<!--  In den Dateien "HIMYM_Quiz.htm" sowie "HIMYM_Bar.htm" wurden Änderungen von Sergej Kasper vorgenommen,   -->
+<!--  die relevant für Content-Erstellung und Einbindung des Quiz-Javascripts waren.   -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <!-- seah -->
 <html xmlns="http://www.w3.org/1999/xhtml" > <!-- hepo -->
 <head>
@@ -6,41 +14,60 @@
     <title>How I Met Your Mother</title> <!-- hepo -->
   <link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
   <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+  <!----------------------------------------------------------------->
+    <script type="text/javascript" src="js/LinkShift.js" charset="ISO-8859-15"></script><!-- ISO musste für javascript sein-->
+
 </head>
 <body>
-<div id="Layout"> <!-- seah: Neustukturierung der Seite. Elemente sind nun geschachtelt und mittig zentriert. -->
+<div id="Layout">
+
+
+<!--  "leftnav" ist die linke Navigationsleiste, die eine tiefergehende Navigation innerhalb der   -->
+<!--  Oberkategorien ermöglicht. Die Links verwenden immer dieselben Bilder, während die   -->
+<!--  Beschriftung hier in der HTML-Datei festgelegt wird.   -->
 
   <div id="leftnav"> <!-- seah -->
         <ul>
-      <li id="Link1">
-      <a class="Linktitel" href="index.htm"><span>Startseite</span></a>
+      <li id="Link1" onmouseover="shift('Link1');">
+      <a class="Linktitel" href="index.htm"><span>News</span></a>
      </li>
 
-      <li id="Link2">
+      <li id="Link2" onmouseover="shift('Link2');">
       <a class="Linktitel" href="html/HIMYM_Bar.htm"><span>Die Bar</span></a>
      </li>
 
-     <li id="Link3">
+     <li id="Link3" onmouseover="shift('Link3');">
      <a class="Linktitel" href="html/HIMYM_Quiz.htm"><span>Das Quiz</span></a>
      </li>
     
-     <li id="Link4">
+     <li id="Link4" onmouseover="shift('Link4');">
      <a class="Linktitel" href="html/HIMYM_Show.htm"><span>Die Show</span></a>
      </li>
 
-     <li id="Link5">
+     <li id="Link5" onmouseover="shift('Link5');">
      <a class="Linktitel" href="html/HIMYM_Medien.htm"><span>Medien</span></a>
     </li>
     </ul>
   </div>
 
+  <!--  Auf jeder Seite ist zum Impressum verlinkt, in dem sich Kontaktdaten und Quellenangaben befinden.  -->
+
     <div id="Impressum"> <!-- hepo -->
         <a href="html/HIMYM_Impressum.htm"></a>
     </div>
 
+    <!--  "topnav" beinhaltet Links zu den Oberkategorien der Seite:   -->
+    <!--  News, die Bar, das Quiz, Infos über die Show und die Mediensammlung.  -->
+    <!--  Die "Buttons", wie die einzelnen Links hier bezeichnet werden, sind mittels eines Hover-Effekts   -->
+    <!--  (näheres dazu in der CSS) animiert, um ansprechender zu wirken und die Themengebiete passend -->
+    <!--  zu visualisieren.   -->
+    <!--  Wie "leftnav" sind auch die Buttons in einer Liste aufgeführt, in der sie relativ positioniert sind. -->
+    <!--  Alle Buttons verwenden pur in CSS definierte Sprechblasen und beinhalten entsprechende Bilder und Texte. -->
+    <!--  Zu diesen Bildern zählen die Gesichter der Charaktere, die Themen mit den Charakteren assoziieren sollen. -->
+
     <div id="topnav"> <!-- seah -->
         <ul>
-            <li id="Button1">
+            <li id="Button1"><!-- hepo -->
                 <a href="index.htm">
                     <img class="Bubble" src="gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="gfx/layout/RobinBubble.png" alt="Robin Profil"/>
@@ -48,7 +75,7 @@
                 </a>
             </li>
   
-            <li id="Button2">
+            <li id="Button2"><!-- hepo -->
                 <a href="html/HIMYM_Bar.htm">
                     <img class="Bubble" src="gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="gfx/layout/MarshallBubble.png" alt="Marshall Profil"/>
@@ -57,7 +84,7 @@
                 </a>
             </li>
   
-            <li id="Button3">
+            <li id="Button3"><!-- hepo -->
                 <a href="html/HIMYM_Quiz.htm">
                     <img class="Bubble" src="gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="gfx/layout/BarneyBubble.png" alt="Barney Profil"/>
@@ -66,7 +93,7 @@
                 </a>
             </li>
   
-            <li id="Button4">
+            <li id="Button4"><!-- hepo -->
                 <a  href="html/HIMYM_Show.htm">
                     <img class="Bubble" src="gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="gfx/layout/TedBubble.png" alt="Ted Profil"/>
@@ -75,7 +102,7 @@
                 </a>
             </li>
   
-            <li id="Button5">
+            <li id="Button5"><!-- hepo -->
                 <a href="html/HIMYM_Medien.htm">
                     <img class="Bubble" src="gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="gfx/layout/LilyBubble.png" alt="Lily Profil"/>
@@ -86,11 +113,23 @@
       </ul>
   </div>
 
-  <div id="Button6"></div>
+  <!--  Der sechste "Button" ist kein Button im eigentlichen Sinne. -->
+  <!--  Er ist eigentlich Bestandteil des Layouts und ist dazu bestimmt, von Sprechblasen und den dazugehörigen Gesichtern -->
+  <!--  überlagert zu werden. Darum besitzt er keinen Inhalt und verfügt in der CSS über einen z-Index von 0. -->
+
+  <div id="Button6"></div><!-- hepo -->
+
+  <!--  In der Content-Div-Box befinden sich sämtliche Inhalte der einzelnen Seiten. -->
+  <!--  Bis auf die verschieden beschrifteten Links in "leftnav" ist dies der einzige Bereich, in dem -->
+  <!--  sich die einzelnen Seiten unterscheiden. -->
 
   <div id="Content"> <!-- hepo -->
 
-    <div id="Text">
+  <!--  Text liegt im linken Bereich der Content-Box und beinhaltet, naheliegend, hauptsächlich Schrift. -->
+  <!--  Diverse Schriftformatierungen werden hierauf angewandt. Zudem gibt es die Möglichkeit, -->
+  <!--  mit Sprechblasen versehene Begriffe einzufügen. -->
+
+    <div id="Text"><!-- hepo -->
 
     <h1>News</h1>
     <p>Die neue Staffel ist angekündigt! Am 19. September ist es soweit. <br />
@@ -100,7 +139,10 @@
 
     </div>
 
-    <div id="Bilder">
+  <!--  In der Bilder-Div-Box werden, gleich einem Fotoalbum, verschiedene zum Text passende Bilder gesammelt. -->
+  <!--  Alle Bilder werden in der Mediengalerie noch einmal aufgeführt, wo sie bis auf eine Größenanpassung unbearbeitet vorliegen. -->
+
+    <div id="Bilder"><!-- hepo -->
     <img src="gfx/pictures/Polaroid_News1.png" alt="Robin bei Metro News 1"/>
     <img src="gfx/pictures/Polaroid_News2.png" alt="Premiere von Staffel 7"/>
     </div>

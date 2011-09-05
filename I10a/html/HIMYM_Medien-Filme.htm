@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+﻿<!--  Zuständigkeit für die HTML-Dateien   -->
+<!--  ----------------------------------   -->
+<!--  Die HTML-Dateien folgen einem gemeinsamen Layout, das auch in der XSLT verwendet wird.   -->
+<!--  Die HTML-Dateien wurden von Henrik Porath erstellt und von Sebastian Ahlen und Henrik Porath   -->
+<!--  im Rahmen von CSS-Anpassungen und Qualitätssicherung weiter verändert.   -->
+<!--  In den Dateien "HIMYM_Quiz.htm" sowie "HIMYM_Bar.htm" wurden Änderungen von Sergej Kasper vorgenommen,   -->
+<!--  die relevant für Content-Erstellung und Einbindung des Quiz-Javascripts waren.   -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <!-- seah -->
 <html xmlns="http://www.w3.org/1999/xhtml" > <!-- hepo -->
 <head>
@@ -9,7 +17,11 @@
 </head>
 <body>
 
-<div id="Layout"> <!-- seah: Neustukturierung der Seite. Elemente sind nun geschachtelt und mittig zentriert. -->
+<div id="Layout"> <!-- seah -->
+
+<!--  "leftnav" ist die linke Navigationsleiste, die eine tiefergehende Navigation innerhalb der   -->
+<!--  Oberkategorien ermöglicht. Die Links verwenden immer dieselben Bilder, während die   -->
+<!--  Beschriftung hier in der HTML-Datei festgelegt wird.   -->
 
   <div id="leftnav"> <!-- seah -->
         <ul>
@@ -27,13 +39,24 @@
     </ul>
   </div>
 
+<!--  Auf jeder Seite ist zum Impressum verlinkt (außer dem Impressum selbst), in dem sich Kontaktdaten und Quellenangaben befinden.  -->
+
    <div id="Impressum"> <!-- hepo -->
         <a href="HIMYM_Impressum.htm"></a>
     </div>
 
+<!--  "topnav" beinhaltet Links zu den Oberkategorien der Seite:   -->
+<!--  News, die Bar, das Quiz, Infos über die Show und die Mediensammlung.  -->
+<!--  Die "Buttons", wie die einzelnen Links hier bezeichnet werden, sind mittels eines Hover-Effekts   -->
+<!--  (näheres dazu in der CSS) animiert, um ansprechender zu wirken und die Themengebiete passend -->
+<!--  zu visualisieren.   -->
+<!--  Wie "leftnav" sind auch die Buttons in einer Liste aufgeführt, in der sie relativ positioniert sind. -->
+<!--  Alle Buttons verwenden pur in CSS definierte Sprechblasen und beinhalten entsprechende Bilder und Texte. -->
+<!--  Zu diesen Bildern zählen die Gesichter der Charaktere, die Themen mit den Charakteren assoziieren sollen. -->
+
     <div id="topnav"> <!-- seah -->
         <ul>
-            <li id="Button1">
+            <li id="Button1"><!-- hepo -->
                 <a href="../index.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/RobinBubble.png" alt="Robin Profil"/>
@@ -41,7 +64,7 @@
                 </a>
             </li>
   
-            <li id="Button2">
+            <li id="Button2"><!-- hepo -->
                 <a href="HIMYM_Bar.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/MarshallBubble.png" alt="Marshall Profil"/>
@@ -50,7 +73,7 @@
                 </a>
             </li>
   
-            <li id="Button3">
+            <li id="Button3"><!-- hepo -->
                 <a href="HIMYM_Quiz.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/BarneyBubble.png" alt="Barney Profil"/>
@@ -59,7 +82,7 @@
                 </a>
             </li>
   
-            <li id="Button4">
+            <li id="Button4"><!-- hepo -->
                 <a  href="HIMYM_Show.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/TedBubble.png" alt="Ted Profil"/>
@@ -68,7 +91,7 @@
                 </a>
             </li>
   
-            <li id="Button5">
+            <li id="Button5"><!-- hepo -->
                 <a href="HIMYM_Medien.htm">
                     <img class="Bubble" src="../gfx/layout/SpeechBubble.png" alt="Sprechblase"/>
                     <img class="SpeechBubbleHead" src="../gfx/layout/LilyBubble.png" alt="Lily Profil"/>
@@ -79,16 +102,38 @@
       </ul>
   </div>
 
-  <div id="Button6"></div>
+  <!--  Der sechste "Button" ist kein Button im eigentlichen Sinne. -->
+<!--  Er ist eigentlich Bestandteil des Layouts und ist dazu bestimmt, von Sprechblasen und den dazugehörigen Gesichtern -->
+<!--  überlagert zu werden. Darum besitzt er keinen Inhalt und verfügt in der CSS über einen z-Index von 0. -->
+
+  <div id="Button6"></div><!-- hepo -->
+
+<!--  In der Content-Div-Box befinden sich sämtliche Inhalte der einzelnen Seiten. -->
+<!--  Bis auf die verschieden beschrifteten Links in "leftnav" ist dies der einzige Bereich, in dem -->
+<!--  sich die einzelnen Seiten unterscheiden. -->
 
   <div id="Content"> <!-- hepo -->
 
-   <div id="Medientext">
+<!--  Medientext liegt in der Content-Box und beinhaltet, naheliegend, hauptsächlich Schrift. -->
+<!--  Diverse Schriftformatierungen werden hierauf angewandt.  -->
+<!--  Hier wird nicht die Div-Box "Text" verwendet, da "Medientext" sein muss.  -->
+
+   <div id="Medientext"><!-- hepo -->
         <h1>Videos zu "How I Met Your Mother"</h1>
         <p>Im Folgenden findet ihr eine Auswahl von Video-Links rund um die Sendung!<br />
         Viel Spaß beim Durchstöbern!</p>
         <p>
         <a href="http://www.youtube.com/watch?v=wQ2cpOHaZk4">How I Met Your Mother - Season 7 - Promo/Trailer - Season Premiere Monday Sept 19 - On CBS </a><br />
+        </p>
+        <h1>Links der Bar</h1>
+        <p>Hier fidet ihr alle Video-Links aus der Bar!</p>
+        <p>
+            <a href="http://www.youtube.com/watch?v=q3KUoGnP_nU">Sporttaucher</a><br />
+        <a href="http://www.myvideo.de/watch/5993447/HIMYM_Ted_Barney_the_Bar">Ted und Barney als Barkeeper</a><br />
+        <a href="http://www.youtube.com/watch?v=GAx0DYI3los">Ted sieht Robin</a><br />
+        <a href="http://www.youtube.com/watch?v=vaISojYJvDQ">Barneys bester Anmachspruch</a><br />
+        <a href="http://www.youtube.com/watch?v=ZDVoFMGF8kY"> Kennenlernen Barney & Ted </a><br />
+        <a href="http://www.youtube.com/watch?v=AVzn17u7kEU"> Marshall zeigt Barney wie man lebt</a><br />
         </p>
     </div>
 
