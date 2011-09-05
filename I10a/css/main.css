@@ -331,25 +331,25 @@ div#Quizbilder,div#Bild,div#Quiztext,#Stage,div#reset,div#welcome,div#eingabe /*
 {position:absolute;}
 
 div#Quizbilder /*seka*/
-{z-index: 0; width: 650px; height: 270px;}
+{left:100px; bottom:130px; z-index: 0; width: 450px; height: 320px;}
 
 div#Bild /*seka*/
 {z-index: 3; border-color:Orange; border-width:3px; border-style:groove;}
 
 div#Quiztext /*seka*/
-{top:225px; left:0px; width: 650px; height: 130px; z-index: 2; background-color:transparent;}
+{top:225px; left:0px; width: 450px; height: 130px; z-index: 2; background-color:transparent;}
 
 #Stage /*seka*/
-{width: 500px; left: 0px; bottom:15px; z-index: 4; color:orange;background-color:#6b1705;font-size:medium;}
+{width: 430px; left: 0px; bottom:20px; z-index: 4; color:#ffffff;background-color:#786139;font-size:medium; padding: 10px;}
 
 div#reset /*seka*/
 {top:50px; width: 650px; left:0px; height:50px;}
 
 div#welcome /*seka*/
-{top:50px; width: 650px; left:0px; height:50px;}
+{top:80px; left:100px; width: 650px; height:50px;}
 
 div#eingabe /*seka*/
-{top:50px; width: 650px; left:0px; height:80px;}
+{left:60px; top:55px; width: 560px; height:80px;}
 
 div#eingabe div p /*seka*/ 
 {margin-top:5px; margin-bottom:5px; background-color:black; font-size:0;}

@@ -108,12 +108,14 @@ Schritt 4: Auswertung einer Antwort
 
 /***********2.Funktionen**********************************************************************************************************************************************************/
 /***********2.0.go**********************************************************************************************************************************************************/
-/*Go lädt die Willkomensmaske (siehe Einleitung, Schritt 1)*/
+/*Go lädt die Willkommensmaske (siehe Einleitung, Schritt 1)*/
 
 function go()
 {
     if (document.getElementsByName("sname") != "") {
         spielername = document.anmeldung.sname.value;
+        mhandlung[0] = "Hi " + spielername + ". Du stehst mit Barney an der Bar. Eine Schönheit die ihresgleichen sucht lässt deinen Herzschlag stoppen. Du hörst nur 'Dips!!' und Barney ist an dir vorbei. Waas tust du?!? LOS!";
+        mhandlung[1] = "Barneys erste Worte an Sie sind: 'Hi Barney Stinson! Ach ...und das ist " + String(spielername) + ". Stehst du auf Magie?' Funken sprühen aus seiner Hand und was auf ihr zurückbleibt, ist seine Nummer. Sie sagt: 'Hi ich bin Amy. Netter Zaubertrick, wo hast du denn das gelernt?' Was tust du?";
         ZumAnfang("hidden", "visible");
         document.getElementById('welcome').style.visibility = "hidden";
         Quiz();
@@ -127,8 +129,7 @@ function go()
 /* Quiz stellt den Stand des Spiels durch das entsprechende Bild,
 *die Situationsbeschreibung und die Auswahlmöglichkeiten dar, 
 *solange dieses nicht durch eine Eingabe endet.*/
-function Quiz() 
-{
+function Quiz() {
      var vbild = String(vstand) + '.jpg'; /* Der Name des darzustellenden Bildes wird zusammengesetzt. Die Bilder haben als Namen die Zahl des auf ihnen dargestellten Quizstandes.*/
      document.getElementById('Bild').src = "../gfx/Quiz/" + vbild; /*Pfadangabe des Bildes wird angefügt und an das src Argment von img übergeben*/
 
@@ -137,8 +138,7 @@ function Quiz()
         ZumAnfang("hidden", "hidden");/* Einblenden der Willkommensmaske siehe Schritt 1*/
     }
     else {
-
-        vjetzigerMS = mhandlung[vstand][strang];/*Die Beschreibung des aktuellen Standes wird aus dem Array "mhandlung" bezogen. */
+        vjetzigerMS = mhandlung[vstand];/*Die Beschreibung des aktuellen Standes wird aus dem Array "mhandlung" bezogen. */
         schreibe(vjetzigerMS, 'Stage'); /* Die Beschreibung wird in die Div mit der Id="Stage" geschrieben */
         var l = 0; /* l ist eine Laufvariable für das Array "mreaktion" */
         for (var k = 0; k < document.getElementsByName("Handlung").length; k++) /* Mit der Schleife werden alle Radiobuttons für die Handlungsmöglichkeiten durchlaufen. */
@@ -173,7 +173,7 @@ function ZumAnfang(vreset, veingabe) {
         vokantworten = vokantworten + vantwortok;/*s.o.*/
         vschlechteantworten = vschlechteantworten + vantwortschlecht; /*s.o.*/
         vsehrschlechteantworten = vsehrschlechteantworten + vantwortsehrschlecht; /*s.o.*/
-        schreibe(spielername, "name");/* Schreibt den Spielernamen in den span mit der id="name"*/
+        schreibe(spielername, "name"); /* Schreibt den Spielernamen in den span mit der id="name"*/
         schreibe(vversuch, "versuch");/* Schreibt die Versuchsnummer des abgeschlossenen Versuches in den span mit der id="name"*/ 
         schreibe('Legendäre Antworten: ' + String(vantwortgut) + '  je Spiel im Schnitt: ' + vguteantworten / vversuch, "Statistik1");/*Schreibt die Gesamtzahl der guten Antworten im aktuellen Versuch in den span mit der id="Statistik1".Ebenso wird mit den entsprechenden Variablen aller anderen Antwortkategoien verfahren.*/
         schreibe('gute Antworten: ' + String(vantwortok) + '  je Spiel im Schnitt: ' + vokantworten / vversuch, "Statistik2");/*Wie oben. Lediglich andere span (id=Statistik2)*/
@@ -371,8 +371,8 @@ In mhandlung stehen die einzelenen Beschreibungen zu den Quizszenarien, die in d
 */
 
 mhandlung = new Array(3);
-mhandlung[0] = "Hi" + spielername + ". Du stehst mit Barney an der Bar. Eine Schönheit die ihresgleichen sucht lässt deinen Herzschlag stoppen. Du hörst nur 'Dips!!' und Barney ist an dir vorbei. Waas tust du?!? LOS!";
-mhandlung[1] = "Barneys erste Worte an Sie sind: 'Hi Barney Stinson! Ach ...und das ist" + String(spielername) + ". Stehst du auf Magie?' Funken sprühen aus seiner Hand und was auf ihr zurückbleibt, ist seine Nummer. Der Engel, dem wir uns gegenübersehen sagt: 'Hi ich bin Amy. Netter Zaubertrick, wo hast du denn das gelernt?' Barney sagt: 'Aus Indien habe ich eben mehr als nur die Perfektion der Liebeskunst mitgenommen. Sie glaubt Barney nicht 100%ig, aber auf ihren Lippen zeichnet sich ein Lächeln ab. Was tust du?";
+mhandlung[0] = "";
+mhandlung[1] = "";
 mhandlung[2] = "Nachdem ihr ausgetrunken habt, sagt sie:'Ist das nur mein Eindruck, oder ist der Mai Thai hier ganz schön stark? Egal, ich habe jetzt lust auf Party. In welchen Clubs ist heute was los?";
 
 /*
@@ -404,10 +404,10 @@ Für die Bedeutung der Wertungen siehe Schritt 4 in der Einleitung.
 mreaktion = new Array(2);
 mreaktion[0] = new Array(12);
 mreaktion[0][0]="Ich bleibe an der Bar sitzen und sehe einfach gut aus...";
-mreaktion[0][1]="denn ich habe es nicht nötig aufzustehen. Frauen müssen schon zu mir kommen. Barney wird Sie mir gleich vorstellen, dann tue ich so, als hätte ich etwas wichtiges zu tun und würde gerade genug Zeit für einen 5 Minuten- Flirt und eine andere ca. 45 Minuten dauernde Aktivität haben.";
+mreaktion[0][1]="Frauen müssen schon zu mir kommen. Barney wird Sie mir schon gleich vorstellen.";
 mreaktion[0][2] = 1;
-mreaktion[0][3]="Noch ehe Barney zum Zug kommt torpediere ich seine Bemühungen...";
-mreaktion[0][4]="indem ich ihn als notorischen Lügner entlarve. Dann sage ich ihr mit Nachdruck, dass ich die kaltblütige Täuschung von Frauen nicht gutheiße, auch wenn ich ihr, so heiß wie sie aussieht, so ziemlich alles erzählen würde, um sie ab zu schleppen. ";
+mreaktion[0][3]="Ich torpediere Barneys Bemühungen...";
+mreaktion[0][4]="indem ich ihn als notorischen Lügner entlarve, da ich die kaltblütige Täuschung von Frauen nicht gutheiße.";
 mreaktion[0][5] = 0;
 mreaktion[0][6]="Ich stelle mich lediglich zu den beiden...";
 mreaktion[0][7]="damit Barney nicht darum herumkommt mich vorzustellen und seh dann weiter.";
